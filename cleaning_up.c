@@ -11,30 +11,22 @@ void        clear_filenode(t_filenode *file, size_t size)
 {
     if (size == 0)
         return ;
-    if (file->file_info != NULL)
-	  free(file->file_info);
+    if (l_flag == 1 || t_flag == 1)
+    {
+        if (l_flag == 1)
+        {
+            ft_strdel(&file->file_info->amounths_of_links);
+            ft_strdel(&file->file_info->size);
+        }
+	    free(file->file_info);
+        file->file_info = NULL;
+	}
     ft_strdel(&(file->name));
     ft_memdel(file);
 }
 
 void        clear_filenode2(t_filenode *file/*, size_t size*/)
 {
-
-  ft_strdel(&(file->name));
-  ft_memdel(file);
+    ft_strdel(&(file->name));
+    ft_memdel(file);
 }
-
-/*void        clean_up(t_list **all)
-{
-    t_list      *tmp;
-
-    while (*all)
-    {
-        tmp = (*all)->next;
-        clear_filenode((*all)->content);
-        free((*all)->content);
-        free(*all);
-        *all = NULL;
-        *all = tmp;
-    }
-}*/

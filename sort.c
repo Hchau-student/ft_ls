@@ -28,20 +28,27 @@ void        swap_list_filenodes(t_list *one, t_list *two) //возможно, с
     two->content = tmp;
 }
 
-int     sorting(t_list **begin, int (*cmp)(t_filenode *, t_filenode *)) //возможно, следует сделать мёрж сорт
+int     sorting(t_list **begin, int(cmp(t_filenode *, t_filenode *))) //возможно, следует сделать мёрж сорт
 {
     t_list  *first;
 
     first = (*begin);
     while (first->next)
     {
-        if (cmp(first->content, first->next->content) > 0)
+        //first = (*begin);
+        while (first->next)
         {
-            swap_list_filenodes(first, first->next);
-            first = *begin;
-        }
-        else
+            if (cmp(first->content, first->next->content) > 0)
+                swap_list_filenodes(first, first->next);
             first = first->next;
+        }
+        first = *begin;
+        while (first->next)
+        {
+            if (cmp(first->content, first->next->content) > 0)
+                break ;
+            first = first->next;
+        }
     }
     return (0);
 }

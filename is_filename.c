@@ -6,6 +6,7 @@ int     is_filename(char *name)
 
     if (!(to_open = opendir(name)))
         return (-1);
-    closedir(to_open);
+    if (closedir(to_open) == -1)
+        ft_putstr("обработать ошибку закрытия");
     return (0);
 }

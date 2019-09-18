@@ -6,15 +6,13 @@ void    print_spaces(int amount)
         ft_putchar(' ');
 }
 
+
 void 	print_access(int access)
 {
 	S_IRWXU & access ? ft_putchar('r') : ft_putchar('-');
-	S_IWUSR & access ?
-	ft_putchar('w') : ft_putchar('-');
-	S_IXUSR & access ?
-	ft_putchar('x') : ft_putchar('-');
-	S_IRGRP & access ?
-	ft_putchar('r') : ft_putchar('-');
+	S_IWUSR & access ? ft_putchar('w') : ft_putchar('-');
+	S_IXUSR & access ? ft_putchar('x') : ft_putchar('-');
+	S_IRGRP & access ? ft_putchar('r') : ft_putchar('-');
 	S_IWGRP & access ?
 	ft_putchar('w') : ft_putchar('-');
 	S_IXGRP & access ?
@@ -46,9 +44,7 @@ void    print_type_and_access(t_extrainf *file_info)
 		type = 'p';
 	ft_putchar(type);
 	print_access(file_info->access);
-	if (file_info->extraaccess != 1)
-		print_spaces(1);
-	else
+	if (file_info->extraaccess == 1)
 		ft_putchar('@');
-	print_spaces(1);
+	ft_putchar('\t');
 }

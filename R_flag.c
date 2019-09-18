@@ -10,6 +10,7 @@ int     R_function(t_list *all_files, char *name)
     char            *all_path;
     t_list          *next_dir;
     char            *tmp;
+    int             total;
 
     all_path = ft_strjoin(name, "/");
     while (all_files)
@@ -19,9 +20,9 @@ int     R_function(t_list *all_files, char *name)
             if (((t_filenode *)all_files->content)->name[0] != '.')
             {
                 tmp = ft_strjoin(all_path, ((t_filenode *)all_files->content)->name);
-                next_dir = simple_ls(tmp);
+                total = simple_ls(tmp, &next_dir);
                 ft_putendl(tmp);
-                put_names(next_dir);
+                put_names(next_dir, total);
                 R_function(next_dir, tmp);
                 ft_lstdel(&next_dir, clear_filenode);
                 ft_strdel(&tmp);
