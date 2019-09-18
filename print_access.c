@@ -25,7 +25,7 @@ void 	print_access(int access)
 	ft_putchar('x') : ft_putchar('-');
 }
 
-void    print_type_and_access(t_extrainf *file_info)
+void    print_type_and_access(t_filenode *file_info)
 {
 	char 	type;
 

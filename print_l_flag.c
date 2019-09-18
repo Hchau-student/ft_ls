@@ -9,7 +9,7 @@ void        print_total(int total)
     ft_putchar('\n');
 }
 
-void        write_else(t_extrainf *here)
+void        write_else(t_filenode *here)
 {
 	char    **time_res;
 	char    *res;
@@ -32,8 +32,8 @@ void        write_else(t_extrainf *here)
 
 void		print_extra_info(t_list *lst)
 {
-    print_type_and_access(((t_filenode *) lst->content)->file_info);
+    print_type_and_access(((t_filenode *) lst->content));
 
-    write_else(((t_filenode *) lst->content)->file_info);
+    write_else(((t_filenode *) lst->content));
     ft_putchar('\n');
 }

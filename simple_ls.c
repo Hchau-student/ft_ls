@@ -36,6 +36,7 @@ int        simple_ls(char *name, t_list **dir_content)
     char 			*to_free;
     int             total;
 
+    fill_len_nuls;
     if (!(dir_fd = opendir(name)))
     {
         ft_putstr("Error");

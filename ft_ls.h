@@ -26,36 +26,29 @@ int      l_flag;
 int      a_flag;
 
 
-typedef struct      s_extrainf              /*      для -l    */
-{
-    unsigned long long				mod_time_sec;
-	unsigned long long				mod_time_nsec;
-	int 							access;
-	char                            *amounths_of_links;
-    struct passwd                   *user;
-    struct group                    *group;
-	char                            *size;
-	int                             extraaccess;
-	int                             spaces_for_links;
-	int                             total;
-//    int             				nichego_no_budet_mnogo;
-    //total: перед данными файлов вывести общий вес всех файлов в папке
-    //тип (бонусы - мажорное/минорное устройство или что?)
-    //права доступа
-    //размер
-    //создатель или владелец? в чём разница?
-    //год модификации
-    //количество ссылок?
-    //месяц модицикации
-    //дата модификации
-    //время модицикации
-}                   t_extrainf;
+int     spaces_for_links;
+int     spaces_for_uid;
+int     spaces_for_grid;
+int     spaces_for_size;
+int     spaces_for_time;
+
+#define PARAM int param
+#define LINKS spaces_for_links;
+#define UID spaces_for_uid;
+
 
 typedef struct      s_filenode
 {
-    char            *name;
-    int             type_of_file;
-	t_extrainf      *file_info;
+    char                            *name;
+    int                             type_of_file;
+    unsigned long long				mod_time_sec;
+    unsigned long long				mod_time_nsec;
+    int 							access;
+    char                            *amounths_of_links;
+    struct passwd                   *user;
+    struct group                    *group;
+    char                            *size;
+    int                             extraaccess;
 
 }                   t_filenode;
 
@@ -85,11 +78,17 @@ int             create_simplenode(int type, char *name, char *full_name, t_filen
 /* * * * печать * * * */
 void            put_names(t_list *lst, int total);
 void            print_extra_info(t_list *lst);
-void            print_type_and_access(t_extrainf *file_info);
+void            print_type_and_access(t_filenode *file_info);
 void            print_total(int total);
 
 /* * * * очистка * * * */
 void            clear_filenode(t_filenode *file, size_t size);
 void            clear_filenode2(t_filenode *file/*, size_t size*/);
+
+/* * * * max_len * * * */
+void    fill_len_nuls(void);
+void    count_max_len(t_filenode *inf);
+
+
 
 #endif

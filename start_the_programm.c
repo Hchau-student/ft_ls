@@ -5,7 +5,7 @@ void    put_names(t_list *lst, int total)
 {
     if (!lst)
         return ;
-    if (l_flag == 1)
+    if (l_flag)
         print_total(total);
     while (lst)
     {

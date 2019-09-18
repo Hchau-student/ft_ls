@@ -33,20 +33,13 @@ int     sorting(t_list **begin, int(cmp(t_filenode *, t_filenode *))) //возм
     t_list  *first;
 
     first = (*begin);
-    while (first->next)
+    while (first && first->next)
     {
-        //first = (*begin);
+        first = (*begin);
         while (first->next)
         {
             if (cmp(first->content, first->next->content) > 0)
                 swap_list_filenodes(first, first->next);
-            first = first->next;
-        }
-        first = *begin;
-        while (first->next)
-        {
-            if (cmp(first->content, first->next->content) > 0)
-                break ;
             first = first->next;
         }
     }
