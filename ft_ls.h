@@ -1,7 +1,7 @@
 #ifndef FT_LS_H
 #define FT_LS_H
 
-#include "libft/libft.h"
+#include "../libft/libft.h"
 
 //дефайн всех типов: дир = 4 и т.д.
 
@@ -14,6 +14,8 @@
 #include <pwd.h>
 #include <grp.h>
 #include <sys/xattr.h>
+//#include <stdio.h>
+#include <unistd.h>
 
 #define     FOLDER 4
 //для -1 или -С флага:
@@ -24,7 +26,6 @@ int      r_flag;
 int      t_flag;
 int      l_flag;
 int      a_flag;
-
 
 int     spaces_for_links;
 int     spaces_for_uid;
@@ -37,40 +38,53 @@ int     spaces_for_time;
 #define UID spaces_for_uid;
 
 
-typedef struct      s_filenode
+typedef struct                      s_filenode
 {
     char                            *name;
     int                             type_of_file;
-    unsigned long long				mod_time_sec;
-    unsigned long long				mod_time_nsec;
+    time_t				            mod_time_sec;
+    time_t				            mod_time_nsec;
     int 							access;
     char                            *amounths_of_links;
     struct passwd                   *user;
     struct group                    *group;
     char                            *size;
     int                             extraaccess;
+    char                            *name_for_link;
+}                                   t_filenode;
 
-}                   t_filenode;
-
-/* * * * добавить в либу! * * * */
+/*
+ * добавить в либу!
+ * */
 void            ft_lstpush(t_list **beginlist, t_list *add);
 
-/* * * * сортировка * * * */
+/*
+ * сортировка
+ * */
 void            sort(t_list **filenode);
 int             sorting(t_list **begin, int(cmp(t_filenode *, t_filenode *)));
 
-/* * * * ф-ии сортировки * * * */
+/*
+ * ф-ии сортировки
+ * */
 int             cmp_filenode_name(t_filenode *one, t_filenode *two);
 int             cmp_filenode_name_rev(t_filenode *one, t_filenode *two);
 int             cmp_filenode_data(t_filenode *one, t_filenode *two);
 int             cmp_filenode_data_rev(t_filenode *one, t_filenode *two);
 
-/* * * * начало программы * * * */
+/*
+ * начало программы
+ * */
 int             start_the_programm(char *name);
 int             is_filename(char *name);
-int             recodnise_flag(char *flag_line);
 
-/* * * * сам лс * * * */
+/* * * * флаги * * * */
+int             recodnise_flag(char *flag_line);
+void            null_flags(int count);
+
+/*
+ * сам лс
+ * */
 int             simple_ls(char *name, t_list **dir_content);
 int             R_function(t_list *all_files, char *name);
 int             create_simplenode(int type, char *name, char *full_name, t_filenode **new);
@@ -80,14 +94,16 @@ void            put_names(t_list *lst, int total);
 void            print_extra_info(t_list *lst);
 void            print_type_and_access(t_filenode *file_info);
 void            print_total(int total);
+void            print_with_spaces(int c, int len, char *str);
+void            print_link(char *name);
 
 /* * * * очистка * * * */
-void            clear_filenode(t_filenode *file, size_t size);
-void            clear_filenode2(t_filenode *file/*, size_t size*/);
+void            clear_filenode(void *file, size_t size);
+void            clear_filenode2(t_filenode **file/*, size_t size*/);
 
 /* * * * max_len * * * */
-void    fill_len_nuls(void);
-void    count_max_len(t_filenode *inf);
+void            fill_len_nuls(int count);
+void            count_max_len(t_filenode *inf);
 
 
 

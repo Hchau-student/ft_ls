@@ -1,28 +1,71 @@
-#include "ft_ls.h"
+#include "../includes/ft_ls.h"
+#include "../libft/libft.h"
+
+void    recodnise_dirname(char *name)
+{
+    if ((is_filename(name)) == -1)
+    {
+        ft_putstr("ft_ls: ");
+        ft_putstr(name);
+        ft_putendl(": Permission denied");
+    }
+    else
+        start_the_programm(name);
+}
+
+int     is_filename(char *name)
+{
+    DIR             *to_open;
+    //struct stat     box;
+
+    if (!(to_open = opendir(name)))
+    {
+        return (-1);
+    }
+    if (closedir(to_open) == -1)
+        ft_putstr("обработать ошибку закрытия");
+    return (0);
+}
 
 int     main(int ac, char **flag_or_filename)
 {
     int         i;
+    int         j;
 
     i = 1;
-    if (ac == 1 /* || recodnise_flag(flag_or_filename[i]) == 1 && ac == 2*/)
-        start_the_programm("..");//пока файл находится в папке симейка
-    if (ac > 1 && recodnise_flag(flag_or_filename[i]) == 1)
+    null_flags(5);
+    while (i <= ac && flag_or_filename[i] && (j = recodnise_flag(flag_or_filename[i])) != -2)
     {
-        if (ac == 2)
-            start_the_programm("..");
+        if (flag_or_filename[i] && j != -3)
+        {
+            if ((is_filename(flag_or_filename[i])) != -3)
+            {
+                ft_putstr("illegal option -- ");
+                ft_putchar(flag_or_filename[i][j]);
+                ft_putchar('\n');
+                ft_putendl("usage: ft_ls [-Ralrt1] [file ...]");
+                return (1);
+            }
+        }
         i++;
     }
-    if (ac > 1 && recodnise_flag(flag_or_filename[1]) == -1)
+    if (i >= ac)
+        start_the_programm(".");
+        //отсортировать заголовки, подруга!
+    else
     {
-        if ((is_filename(flag_or_filename[i])) == -1)
+        if (! flag_or_filename[i + 1])
+            recodnise_dirname(flag_or_filename[i++]);
+        while (i < ac && flag_or_filename[i])
         {
-            ft_putendl("usage");
-            return (0);
+            ft_putstr(flag_or_filename[i]);
+            ft_putstr (":\n");
+            recodnise_dirname(flag_or_filename[i]);
+            if ((flag_or_filename[i + 1]))
+                ft_putchar('\n');
+            i++;
         }
     }
-    while (flag_or_filename[i])
-        start_the_programm(flag_or_filename[i++]);
     return (0);
 }
 

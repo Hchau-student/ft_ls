@@ -1,5 +1,5 @@
-#include "ft_ls.h"
-
+#include "../includes/ft_ls.h"
+#include "../libft/libft.h"
 void        sort(t_list **filenode)
 {
     if (!r_flag && !t_flag)                                 //обычный порядок по имени
@@ -35,13 +35,13 @@ int     sorting(t_list **begin, int(cmp(t_filenode *, t_filenode *))) //возм
     first = (*begin);
     while (first && first->next)
     {
-        first = (*begin);
-        while (first->next)
+        if (cmp(first->content, first->next->content) > 0)
         {
-            if (cmp(first->content, first->next->content) > 0)
-                swap_list_filenodes(first, first->next);
-            first = first->next;
+            swap_list_filenodes(first, first->next);
+            first = (*begin);
         }
+        else
+            first = first->next;
     }
     return (0);
 }

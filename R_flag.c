@@ -1,4 +1,4 @@
-#include "ft_ls.h"
+#include "../includes/ft_ls.h"
 #include <stdlib.h>
 
 //Как печатать имя папки?
@@ -17,11 +17,17 @@ int     R_function(t_list *all_files, char *name)
     {
         if (((t_filenode *)all_files->content)->type_of_file == FOLDER)
         {
-            if (((t_filenode *)all_files->content)->name[0] != '.')
+            if ((ft_strcmp(((t_filenode *)all_files->content)->name, ".") && ft_strcmp(((t_filenode *)all_files->content)->name, "..")))
             {
                 tmp = ft_strjoin(all_path, ((t_filenode *)all_files->content)->name);
-                total = simple_ls(tmp, &next_dir);
-                ft_putendl(tmp);
+                if ((total = simple_ls(tmp, &next_dir)) == -1)
+                {
+                    all_files = all_files->next;
+                    continue;
+                }
+                ft_putstr("\n");
+                ft_putstr(tmp);
+                ft_putstr(":\n");
                 put_names(next_dir, total);
                 R_function(next_dir, tmp);
                 ft_lstdel(&next_dir, clear_filenode);
@@ -33,8 +39,3 @@ int     R_function(t_list *all_files, char *name)
     ft_strdel(&all_path);
     return (0);
 }
-
-//if (readdir(smth) == 0) //последний уровень
-//clean_up;
-//рекурсивно вернуться;
-//return (0)

@@ -1,5 +1,5 @@
-#include "ft_ls.h"
-
+#include "../includes/ft_ls.h"
+#include "../libft/libft.h"
 void    print_spaces(int amount)
 {
     while (amount--)
@@ -44,7 +44,9 @@ void    print_type_and_access(t_filenode *file_info)
 		type = 'p';
 	ft_putchar(type);
 	print_access(file_info->access);
-	if (file_info->extraaccess == 1)
-		ft_putchar('@');
-	ft_putchar('\t');
+	if (file_info->extraaccess != 1)
+        ft_putchar(' ');
+    else
+        ft_putchar('@');
+    //ft_putchar(' ');
 }

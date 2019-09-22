@@ -1,9 +1,10 @@
-#include "ft_ls.h"
-
+#include "../includes/ft_ls.h"
+#include "../libft/libft.h"
 /*      
         функция возвращает -1, если есть ошибка в чтении флагов,
                             1, если флаги были введены корректно и
                             0, если первый аргумент не является флагом
+                            проблема: найти "illigal option"
 */
 
 /*      
@@ -15,10 +16,12 @@
         прогнать через дебагер: почему не меняется значение статических переменных?
 */
 
-static int     validate_flag(char *flag_line)
+int     recodnise_flag(char *flag_line)
 {
     int     i;
-    
+
+    if (flag_line[0] && flag_line[0] != '-')
+        return (-2);
     i = 1;
     while (flag_line[i])
     {
@@ -32,21 +35,23 @@ static int     validate_flag(char *flag_line)
             t_flag = 1;
         else if (flag_line[i] == 'l')
             l_flag = 1;
+        else if (flag_line[i] == '1')
+            ;
         else
-            return (-1);
+            return (i);
         i++;
     }
-    return (1);
+    return (-3);
 }
 
-int    recodnise_flag(char *flag_line)
+void    null_flags(int count)
 {
-    if (flag_line[0] && flag_line[0] != '-')
-        return (0);
-    R_flag = 0;
-    r_flag = 0;
-    t_flag = 0;
-    l_flag = 0;
-    a_flag = 0;
-    return (validate_flag(flag_line));
+    if (count == 5)
+    {
+        R_flag = 0;
+        r_flag = 0;
+        t_flag = 0;
+        l_flag = 0;
+        a_flag = 0;
+    }
 }

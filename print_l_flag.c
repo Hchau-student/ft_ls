@@ -1,6 +1,24 @@
-#include "ft_ls.h"
+#include "../includes/ft_ls.h"
 #include <stdio.h>
+#include "../libft/libft.h"
+void        print_link(char *name)
+{
+    ft_putstr(" -> ");
+    if (name != NULL)
+        ft_putstr(name);
+}
 
+void        print_with_spaces(int c, int len, char *str)
+{
+    if (c < len)
+        return ;
+    while (c >= len)
+    {
+        ft_putchar(' ');
+        len++;
+    }
+    ft_putstr(str);
+}
 
 void        print_total(int total)
 {
@@ -12,28 +30,24 @@ void        print_total(int total)
 void        write_else(t_filenode *here)
 {
 	char    **time_res;
-	char    *res;
 	int     i;
 
-	ft_putendl(here->amounths_of_links);        //PRINTF!!!!!!!
-	ft_putendl(here->user->pw_name);
-	ft_putendl(here->group->gr_name);
-	ft_putendl(here->size);                     //PRINTF!!!!!!
+	print_with_spaces(spaces_for_links, ft_strlen(here->amounths_of_links), here->amounths_of_links);
+    print_with_spaces(spaces_for_uid, ft_strlen(here->user->pw_name), here->user->pw_name);
+    print_with_spaces(spaces_for_grid + 1, ft_strlen(here->group->gr_name), here->group->gr_name);
+    print_with_spaces(spaces_for_size + 1, ft_strlen(here->size), here->size);
 	time_res = ft_strsplit(ctime(&(here->mod_time_sec)), ' ');
-	ft_putendl(time_res[2]);
-	ft_putendl(time_res[1]);
+    print_with_spaces(3, 3, time_res[1]);
+        print_with_spaces(2, ft_strlen(time_res[2]), time_res[2]);
 	i = 0;
+	ft_putchar(' ');
 	while((time_res[3]+ i) != (ft_strrchr(time_res[3], ':')))
 		ft_putchar(time_res[3][i++]);
-	ft_putchar('\n');
 	ft_freematr(time_res);
-	ft_putchar('\n');
 }
 
 void		print_extra_info(t_list *lst)
 {
     print_type_and_access(((t_filenode *) lst->content));
-
     write_else(((t_filenode *) lst->content));
-    ft_putchar('\n');
 }
