@@ -28,17 +28,36 @@ void        swap_list_filenodes(t_list *one, t_list *two) //возможно, с
     two->content = tmp;
 }
 
+void        swap_list(t_list **before, t_list **one, t_list **two)      //возможно, если я поменяю местами адреса, будет работать быстрее
+{
+    //t_list      *tmp;
+
+        //tmp = *one;
+        (*one)->next = NULL;
+        //(*before)->next = NULL;
+        (*before)->next = *two;
+        (*one)->next = (*two)->next;
+        (*two)->next = (*one);
+}
+
 int     sorting(t_list **begin, int(cmp(t_filenode *, t_filenode *))) //возможно, следует сделать мёрж сорт
 {
     t_list  *first;
 
     first = (*begin);
-    while (first && first->next)
+    while (first->next)
     {
+//        while (cmp((*begin)->content, (*begin)->next->content) > 0)
+//        {
+//            first = (*begin)->next;
+//            (*begin)->next = (*begin)->next->next;
+//            first->next = (*begin);
+//            *begin = first;
+//        }
         if (cmp(first->content, first->next->content) > 0)
         {
             swap_list_filenodes(first, first->next);
-            first = (*begin);
+            first = *begin;
         }
         else
             first = first->next;

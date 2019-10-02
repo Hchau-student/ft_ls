@@ -16,7 +16,6 @@ void    recodnise_dirname(char *name)
 int     is_filename(char *name)
 {
     DIR             *to_open;
-    //struct stat     box;
 
     if (!(to_open = opendir(name)))
     {
