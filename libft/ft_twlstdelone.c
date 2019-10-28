@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_twlistdelone.c                                     :+:      :+:    :+:   */
+/*   ft_twlistdelone.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchau <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -17,7 +17,7 @@ void	ft_twlstdelone(t_twlist **atwlist, void (*del)(void*, size_t))
 	if (!*atwlist || !atwlist || !del)
 		return ;
 	del((*atwlist)->content, (*atwlist)->content_size);
-    ft_memdel(&(*atwlist)->content);
+	ft_memdel(&(*atwlist)->content);
 	free(*atwlist);
 	*atwlist = NULL;
 }

@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_access.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hchau <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/28 14:47:24 by hchau             #+#    #+#             */
+/*   Updated: 2019/10/28 14:47:25 by hchau            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 #include "../libft/libft.h"
-void    print_spaces(int amount)
+
+void	print_spaces(int amount)
 {
-    while (amount--)
-        ft_putchar(' ');
+	while (amount--)
+		ft_putchar(' ');
 }
 
-
-void 	print_access(int access)
+void	print_access(int access)
 {
 	S_IRWXU & access ? ft_putchar('r') : ft_putchar('-');
 	S_IWUSR & access ? ft_putchar('w') : ft_putchar('-');
@@ -25,9 +37,9 @@ void 	print_access(int access)
 	ft_putchar('x') : ft_putchar('-');
 }
 
-void    print_type_and_access(t_filenode *file_info)
+void	print_type_and_access(t_filenode *file_info)
 {
-	char 	type;
+	char	type;
 
 	type = '-';
 	if (S_ISDIR(file_info->access))
@@ -45,7 +57,7 @@ void    print_type_and_access(t_filenode *file_info)
 	ft_putchar(type);
 	print_access(file_info->access);
 	if (file_info->extraaccess != 1)
-        ft_putchar(' ');
-    else
-        ft_putchar('@');
+		ft_putchar(' ');
+	else
+		ft_putchar('@');
 }

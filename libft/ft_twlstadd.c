@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_twlistadd.c                                        :+:      :+:    :+:   */
+/*   ft_twlistadd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchau <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -19,9 +19,9 @@ void	ft_twlstadd(t_twlist **alltwlist, t_twlist *new)
 	if (*alltwlist == NULL)
 		new->next = NULL;
 	else
-    {
+	{
 		new->next = *alltwlist;
-        (*alltwlist)->prev = new;
-    }
+		(*alltwlist)->prev = new;
+	}
 	*alltwlist = new;
 }

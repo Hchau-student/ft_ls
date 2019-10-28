@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_twlistnew.c                                        :+:      :+:    :+:   */
+/*   ft_twlistnew.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchau <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -36,6 +36,6 @@ t_twlist			*ft_twlstnew(void const *content, size_t content_size)
 		newlist->content_size = content_size;
 	}
 	newlist->next = NULL;
-    newlist->prev = NULL;
+	newlist->prev = NULL;
 	return (newlist);
 }
