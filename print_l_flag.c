@@ -12,6 +12,8 @@ void        print_with_spaces(int c, int len, char *str)
 {
     if (c < len)
         return ;
+    if (c < 0)
+        return ;
     while (c >= len)
     {
         ft_putchar(' ');
@@ -33,8 +35,8 @@ void        write_else(t_filenode *here)
 	int     i;
 
 	print_with_spaces(spaces_for_links, ft_strlen(here->amounths_of_links), here->amounths_of_links);
-    print_with_spaces(spaces_for_uid, ft_strlen(here->user->pw_name), here->user->pw_name);
-    print_with_spaces(spaces_for_grid + 1, ft_strlen(here->group->gr_name), here->group->gr_name);
+    print_with_spaces(spaces_for_uid, ft_strlen(here->username), here->username);
+    print_with_spaces(spaces_for_grid + 1, ft_strlen(here->groupname), here->groupname);
     print_with_spaces(spaces_for_size + 1, ft_strlen(here->size), here->size);
 	time_res = ft_strsplit(ctime(&(here->mod_time_sec)), ' ');
     print_with_spaces(3, 3, time_res[1]);
@@ -46,7 +48,9 @@ void        write_else(t_filenode *here)
 	ft_freematr(time_res);
 }
 
-void		print_extra_info(t_list *lst)
+
+//заменить на tw_list
+void		print_extra_info(t_twlist *lst)
 {
     print_type_and_access(((t_filenode *) lst->content));
     write_else(((t_filenode *) lst->content));

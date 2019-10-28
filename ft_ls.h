@@ -37,7 +37,6 @@ int     spaces_for_time;
 #define LINKS spaces_for_links;
 #define UID spaces_for_uid;
 
-
 typedef struct                      s_filenode
 {
     char                            *name;
@@ -48,6 +47,8 @@ typedef struct                      s_filenode
     char                            *amounths_of_links;
     struct passwd                   *user;
     struct group                    *group;
+    char                            *username;
+    char                            *groupname;
     char                            *size;
     int                             extraaccess;
     char                            *name_for_link;
@@ -56,13 +57,14 @@ typedef struct                      s_filenode
 /*
  * добавить в либу!
  * */
-void            ft_lstpush(t_list **beginlist, t_list *add);
+void            ft_lstpush(t_twlist **beginlist, t_list *add);
+void            ft_twlstpush(t_twlist **beginlist, t_twlist *add);
 
 /*
  * сортировка
  * */
-void            sort(t_list **filenode);
-int             sorting(t_list **begin, int(cmp(t_filenode *, t_filenode *)));
+void            sort(t_twlist **filenode);
+int             sorting(t_twlist **begin, int(cmp(t_filenode *, t_filenode *)));
 
 /*
  * ф-ии сортировки
@@ -85,17 +87,20 @@ void            null_flags(int count);
 /*
  * сам лс
  * */
-int             simple_ls(char *name, t_list **dir_content);
-int             R_function(t_list *all_files, char *name);
+int             simple_ls(char *name, t_twlist **dir_content, char *short_name);
+int             R_function(t_twlist *all_files, char *name);
 int             create_simplenode(int type, char *name, char *full_name, t_filenode **new);
 
 /* * * * печать * * * */
-void            put_names(t_list *lst, int total);
-void            print_extra_info(t_list *lst);
+void            put_names(t_twlist *lst, int total);
+void            print_extra_info(t_twlist *lst);
 void            print_type_and_access(t_filenode *file_info);
 void            print_total(int total);
 void            print_with_spaces(int c, int len, char *str);
 void            print_link(char *name);
+
+/*      для неверного имени     */
+void    recodnise_dirname(char *name);
 
 /* * * * очистка * * * */
 void            clear_filenode(void *file, size_t size);
@@ -104,7 +109,5 @@ void            clear_filenode2(t_filenode **file/*, size_t size*/);
 /* * * * max_len * * * */
 void            fill_len_nuls(int count);
 void            count_max_len(t_filenode *inf);
-
-
 
 #endif

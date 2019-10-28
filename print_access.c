@@ -48,5 +48,4 @@ void    print_type_and_access(t_filenode *file_info)
         ft_putchar(' ');
     else
         ft_putchar('@');
-    //ft_putchar(' ');
 }

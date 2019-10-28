@@ -24,7 +24,7 @@ void        clear_tmp_filenode(t_filenode *to_free)
 	}
 }
 
-int       reading_from_directories(DIR * dir_fd, char *name, t_list **dir_content)
+int       reading_from_directories(DIR * dir_fd, char *name, t_twlist **dir_content)
 {
 	struct dirent   *res;
 	t_filenode      *file_inf;
@@ -40,8 +40,8 @@ int       reading_from_directories(DIR * dir_fd, char *name, t_list **dir_conten
 	        continue ;
 		full_name = ft_strjoin(name, res->d_name);
 		total += create_simplenode(res->d_type, res->d_name, full_name, &file_inf);
-		ft_lstpush(dir_content, ft_lstnew(file_inf, sizeof(t_filenode)));
-		/*if (file_inf->name != NULL)
+		ft_twlstpush(dir_content, ft_twlstnew(file_inf, sizeof(t_filenode)));
+		/*if (file_inf->name != NULL)t
 		ft_strdel(&(file_inf->name));*/
 		//clear_filenode(file_inf, sizeof(t_filenode));
 		free(file_inf);
@@ -53,16 +53,18 @@ int       reading_from_directories(DIR * dir_fd, char *name, t_list **dir_conten
 	return (total);
 }
 
-int        simple_ls(char *name, t_list **dir_content)
+int        simple_ls(char *name, t_twlist **dir_content, char *short_name)
 {
     DIR             *dir_fd;
-//    t_list          *dir_content;
+//    t_twlist          *dir_content;
     int             total;
 
     fill_len_nuls(5);
     if ((dir_fd = opendir(name)) == NULL)
     {
-        ft_putstr("Error");
+        ft_putstr("ft_ls: ");
+        ft_putstr(short_name);
+        ft_putendl(": Permission denied");
         return (-1);
         //обработать ошибку чтения
     }

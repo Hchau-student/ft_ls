@@ -63,6 +63,13 @@ ft_lstiter.c \
 ft_lstmap.c \
 ft_lstclr.c \
 ft_swap.c \
+ft_twlstnew.c \
+ft_twlstdelone.c \
+ft_twlstdel.c \
+ft_twlstadd.c \
+ft_twlstiter.c \
+ft_twlstmap.c \
+ft_twlstclr.c \
 
 OBJ = ft_memset.o \
 ft_bzero.o \
@@ -129,6 +136,13 @@ ft_lstiter.o \
 ft_lstmap.o \
 ft_lstclr.o \
 ft_swap.o \
+ft_twlstnew.o \
+ft_twlstdelone.o \
+ft_twlstdel.o \
+ft_twlstadd.o \
+ft_twlstiter.o \
+ft_twlstmap.o \
+ft_twlstclr.o \
 
 FLAGS = -Wall -Werror -Wextra
 

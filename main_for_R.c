@@ -5,9 +5,9 @@ void    recodnise_dirname(char *name)
 {
     if ((is_filename(name)) == -1)
     {
-        ft_putstr("ft_ls: ");
+        write (1, "ft_ls: ", 7);
         ft_putstr(name);
-        ft_putendl(": Permission denied");
+        write(1, ": Permission denied\n", 20);
     }
     else
         start_the_programm(name);
@@ -16,10 +16,15 @@ void    recodnise_dirname(char *name)
 int     is_filename(char *name)
 {
     DIR             *to_open;
+    struct stat		box;
 
     if (!(to_open = opendir(name)))
     {
-        return (-1);
+    	if (!(stat(name, &box)))
+			return (-3);
+    	if (!(S_IFDIR & box.st_mode))
+        	return (-2);
+		return (-1);
     }
     if (closedir(to_open) == -1)
         ft_putstr("обработать ошибку закрытия");
@@ -39,10 +44,10 @@ int     main(int ac, char **flag_or_filename)
         {
             if ((is_filename(flag_or_filename[i])) != -3)
             {
-                ft_putstr("illegal option -- ");
+                write(1, "illegal option -- ", 18);
                 ft_putchar(flag_or_filename[i][j]);
-                ft_putchar('\n');
-                ft_putendl("usage: ft_ls [-Ralrt1] [file ...]");
+                write(1, "\n", 1);
+                write(1, "usage: ft_ls [-Ralrt] [file ...]", 32);
                 return (1);
             }
         }
@@ -58,10 +63,10 @@ int     main(int ac, char **flag_or_filename)
         while (i < ac && flag_or_filename[i])
         {
             ft_putstr(flag_or_filename[i]);
-            ft_putstr (":\n");
+            write (1, ":\n", 2);
             recodnise_dirname(flag_or_filename[i]);
             if ((flag_or_filename[i + 1]))
-                ft_putchar('\n');
+                write(1, "\n", 1);
             i++;
         }
     }

@@ -23,6 +23,14 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct 			s_twlist
+{
+    void				*content;
+    size_t				content_size;
+    struct s_twlist		*next;
+    struct s_twlist		*prev;
+}						t_twlist;
+
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				ft_putendl(char const *s);
@@ -86,8 +94,14 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstclr(t_list **alst);
 void				ft_swap(int *a, int *b);
+t_twlist			*ft_twlstmap(t_twlist *lst, t_twlist *(*f)(t_twlist *elem));
+t_twlist			*ft_twlstnew(void const *content, size_t content_size);
+void				ft_twlstdelone(t_twlist **alst, void (*del)(void*, size_t));
+void				ft_twlstdel(t_twlist **alst, void (*del)(void *, size_t));
+void				ft_twlstadd(t_twlist **alst, t_twlist *new);
+void				ft_twlstiter(t_twlist *lst, void (*f)(t_twlist *elem));
+void				ft_twlstclr(t_twlist **alst);
 
 #endif

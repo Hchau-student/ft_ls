@@ -18,10 +18,11 @@ void        clear_filenode(void *file, size_t size)
         {
             ft_strdel(&((t_filenode *)file)->amounths_of_links);
             ft_strdel(&((t_filenode *)file)->size);
+            ft_strdel(&((t_filenode *)file)->groupname);
+            ft_strdel(&((t_filenode *)file)->username);
             if(((t_filenode *)file)->type_of_file == 10)
                 ft_strdel(&(((t_filenode *)file)->name_for_link));
         }
 	}
     ft_strdel(&(((t_filenode *)file)->name));
-    //free(((t_filenode *)file));
 }

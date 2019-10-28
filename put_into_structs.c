@@ -3,9 +3,6 @@
 #include "../libft/libft.h"
 //функция для добавления расширенных параметров в структуру
 
-
-
-
 void        create_extrainf(char *name, struct stat box, t_filenode **info)
 {
     char            buf[1024];
@@ -19,6 +16,8 @@ void        create_extrainf(char *name, struct stat box, t_filenode **info)
         (*info)->user = getpwuid(box.st_uid);
         (*info)->group = getgrgid(box.st_gid);
         (*info)->size = ft_itoa(box.st_size);
+        (*info)->username = ft_strdup((*info)->user->pw_name);
+        (*info)->groupname = ft_strdup((*info)->group->gr_name);
 		listxattr(name, buf, 1024, XATTR_NOFOLLOW) > 0 ? (*info)->extraaccess = 1 : 0;
         count_max_len(*info);
 	}
@@ -55,10 +54,12 @@ int         create_simplenode(int type, char *name, char *full_name, t_filenode 
 }
 
 //ft_lstpush
-void    ft_lstpush(t_list **beginlist, t_list *add)
+void    ft_twlstpush(t_twlist **beginlist, t_twlist *add)
 {
     if (!add)
         return ;
     add->next = *beginlist;
+    if (*beginlist != NULL)
+        (*beginlist)->prev = add;
     *beginlist = add;
 }

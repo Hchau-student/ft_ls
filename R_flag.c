@@ -5,10 +5,10 @@
 
 //корректно ли считывать в буфер и кастовать из него?
 
-int     R_function(t_list *all_files, char *name)
+int     R_function(t_twlist *all_files, char *name)
 {
     char            *all_path;
-    t_list          *next_dir;
+    t_twlist          *next_dir;
     char            *tmp;
     int             total;
 
@@ -20,17 +20,18 @@ int     R_function(t_list *all_files, char *name)
             if ((ft_strcmp(((t_filenode *)all_files->content)->name, ".") && ft_strcmp(((t_filenode *)all_files->content)->name, "..")))
             {
                 tmp = ft_strjoin(all_path, ((t_filenode *)all_files->content)->name);
-                if ((total = simple_ls(tmp, &next_dir)) == -1)
+                write(1, "\n", 1);
+                ft_putstr(tmp);
+                write(1, ":\n", 2);
+                if ((total = simple_ls(tmp, &next_dir, ((t_filenode *)all_files->content)->name)) == -1)
                 {
+                    ft_strdel(&tmp);
                     all_files = all_files->next;
                     continue;
                 }
-                ft_putstr("\n");
-                ft_putstr(tmp);
-                ft_putstr(":\n");
                 put_names(next_dir, total);
                 R_function(next_dir, tmp);
-                ft_lstdel(&next_dir, clear_filenode);
+                ft_twlstdel(&next_dir, clear_filenode);
                 ft_strdel(&tmp);
             }
         }

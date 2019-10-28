@@ -1,9 +1,9 @@
 #include "../includes/ft_ls.h"
 #include <stdio.h>
 #include "../libft/libft.h"
-void    put_names(t_list *lst, int total)
+void    put_names(t_twlist *lst, int total)
 {
-    if (!lst)
+    if (!lst || !lst->content)
         return ;
     if (l_flag == 1)
         print_total(total);
@@ -28,14 +28,15 @@ void    put_names(t_list *lst, int total)
 
 int         start_the_programm(char *filename)
 {
-    t_list      *first_look;
+    t_twlist      *first_look;
     int         total;
 
-    total = simple_ls(filename, &first_look);
+    if ((total = simple_ls(filename, &first_look, filename)) == -1)
+        return (0);
     put_names(first_look, total);
     if (R_flag == 1)
         if ((R_function(first_look, filename)) == -1)
             ft_putendl("Error read");
-    ft_lstdel(&first_look, clear_filenode);
+    ft_twlstdel(&first_look, clear_filenode);
     return (0);
 }

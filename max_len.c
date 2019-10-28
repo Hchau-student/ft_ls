@@ -24,15 +24,15 @@ void    count_max_len(t_filenode *inf)
     int     size;
 
     amounths_of_links = ft_strlen((inf)->amounths_of_links);
-    user_id = ft_strlen((inf)->user->pw_name);
-    group_id = ft_strlen((inf)->group->gr_name);
+    user_id = ft_strlen((inf)->username);
+    group_id = ft_strlen((inf)->groupname);
     size = ft_strlen((inf)->size);
     if (spaces_for_links <= amounths_of_links)
         spaces_for_links = amounths_of_links;
-    if (spaces_for_uid < user_id)
+    if (spaces_for_uid <= user_id)
         spaces_for_uid = user_id;
-    if (spaces_for_grid < group_id)
+    if (spaces_for_grid <= group_id)
         spaces_for_grid = group_id;
-    if (spaces_for_size < size)
+    if (spaces_for_size <= size)
         spaces_for_size = size;
 }
