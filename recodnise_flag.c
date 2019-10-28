@@ -18,7 +18,7 @@ int			recodnise_flag(char *flag_line)
 	int		i;
 
 	if (flag_line[0] && flag_line[0] != '-')
-		return (-2);
+		return (-1);
 	i = 1;
 	while (flag_line[i])
 	{
@@ -38,7 +38,7 @@ int			recodnise_flag(char *flag_line)
 			return (i);
 		i++;
 	}
-	return (-3);
+	return (-2);
 }
 
 void		nulg_l_flags(int count)

@@ -13,33 +13,30 @@
 #include "../includes/ft_ls.h"
 #include "../libft/libft.h"
 
-void				recodnise_dirname(char *name)
-{
-	if ((is_filename(name)) == -1)
-	{
-		ft_putstr("ft_ls: ");
-		ft_putstr(name);
-		ft_putstr(": Permission denied\n");
-	}
-	else
-		start_the_programm(name);
-}
-
 int					is_filename(char *name)
 {
 	DIR				*to_open;
-	struct stat		box;
 
 	if (!(to_open = opendir(name)))
-	{
-		if (!(stat(name, &box)))
-			return (-3);
-		if (!(S_IFDIR & box.st_mode))
-			return (-2);
 		return (-1);
-	}
 	if (closedir(to_open) == -1)
 		ft_putstr("обработать ошибку закрытия");
+	return (0);
+}
+
+int					see_if_error(char *flag_or_filename, int if_flag)
+{
+	if (flag_or_filename && if_flag != -2)
+	{
+		if ((is_filename(flag_or_filename)) == -1)
+		{
+			write(1, "illegal option -- ", 18);
+			ft_putchar(flag_or_filename[if_flag]);
+			write(1, "\n", 1);
+			write(1, "usage: ft_ls [-Ralrt] [file ...]\n", 33);
+			return (1);
+		}
+	}
 	return (0);
 }
 
@@ -51,36 +48,22 @@ int					main(int ac, char **flag_or_filename)
 	i = 1;
 	nulg_l_flags(5);
 	while (i <= ac && flag_or_filename[i]
-			&& (j = recodnise_flag(flag_or_filename[i])) != -2)
+			&& (j = recodnise_flag(flag_or_filename[i])) != -1)
 	{
-		if (flag_or_filename[i] && j != -3)
-		{
-			if ((is_filename(flag_or_filename[i])) != -3)
-			{
-				write(1, "illegal option -- ", 18);
-				ft_putchar(flag_or_filename[i][j]);
-				write(1, "\n", 1);
-				write(1, "usage: ft_ls [-Ralrt] [file ...]", 32);
-				return (1);
-			}
-		}
+		if ((see_if_error(flag_or_filename[i], j)) == 1)
+			return (1);
 		i++;
 	}
 	if (i >= ac)
-		start_the_programm(".");
-	else
+		return (start_the_programm("."));
+	while (i < ac && flag_or_filename[i])
 	{
-		if (!flag_or_filename[i + 1])
-			recodnise_dirname(flag_or_filename[i++]);
-		while (i < ac && flag_or_filename[i])
-		{
-			ft_putstr(flag_or_filename[i]);
-			write(1, ":\n", 2);
-			recodnise_dirname(flag_or_filename[i]);
-			if ((flag_or_filename[i + 1]))
-				write(1, "\n", 1);
-			i++;
-		}
+		ft_putstr(flag_or_filename[i]);
+		write(1, ":\n", 2);
+		recodnise_dirname(flag_or_filename[i]);
+		if ((flag_or_filename[i + 1]))
+			write(1, "\n", 1);
+		i++;
 	}
 	return (0);
 }
