@@ -55,7 +55,7 @@ void		write_else(t_filenode *here)
 			ft_strlen(here->groupname), here->groupname);
 	print_with_spaces(g_delim_size + 1,
 			ft_strlen(here->size), here->size);
-	time_res = ft_strsplit(ctime(&(here->mod_time_sec)), ' ');
+	time_res = ft_strsplit(ctime(&(here->mod_time)), ' ');
 	print_with_spaces(3, 3, time_res[1]);
 	print_with_spaces(2, ft_strlen(time_res[2]), time_res[2]);
 	i = 0;

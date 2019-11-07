@@ -22,7 +22,6 @@ void		fill_len_nuls(int count)
 	g_delim_uid = 0;
 	g_delim_grid = 0;
 	g_delim_size = 0;
-	g_delim_time = 0;
 }
 
 void		count_max_len(t_filenode *inf)

@@ -23,18 +23,22 @@ void	print_access(int access)
 {
 	S_IRWXU & access ? ft_putchar('r') : ft_putchar('-');
 	S_IWUSR & access ? ft_putchar('w') : ft_putchar('-');
-	S_IXUSR & access ? ft_putchar('x') : ft_putchar('-');
+	if (S_ISUID & access)
+		S_IXUSR & access ? ft_putchar('s') : ft_putchar('S');
+	else
+		S_IXUSR & access ? ft_putchar('x') : ft_putchar('-');
 	S_IRGRP & access ? ft_putchar('r') : ft_putchar('-');
-	S_IWGRP & access ?
-	ft_putchar('w') : ft_putchar('-');
-	S_IXGRP & access ?
-	ft_putchar('x') : ft_putchar('-');
-	S_IROTH & access ?
-	ft_putchar('r') : ft_putchar('-');
-	S_IWOTH & access ?
-	ft_putchar('w') : ft_putchar('-');
-	S_IXOTH & access ?
-	ft_putchar('x') : ft_putchar('-');
+	S_IWGRP & access ? ft_putchar('w') : ft_putchar('-');
+	if (S_ISGID & access)
+		S_IXGRP & access ? ft_putchar('s') : ft_putchar('S');
+	else
+		S_IXGRP & access ? ft_putchar('x') : ft_putchar('-');
+	S_IROTH & access ? ft_putchar('r') : ft_putchar('-');
+	S_IWOTH & access ? ft_putchar('w') : ft_putchar('-');
+	if (S_ISVTX & access)
+		S_IXOTH & access ? ft_putchar('t') : ft_putchar('T');
+	else
+		S_IXOTH & access ? ft_putchar('x') : ft_putchar('-');
 }
 
 void	print_type_and_access(t_filenode *file_info)
@@ -59,5 +63,5 @@ void	print_type_and_access(t_filenode *file_info)
 	if (file_info->extraaccess != 1)
 		ft_putchar(' ');
 	else
-		ft_putchar('@');
+		ft_putchar(' ');
 }

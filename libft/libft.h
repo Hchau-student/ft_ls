@@ -103,5 +103,7 @@ void				ft_twlstdel(t_twlist **alst, void (*del)(void *, size_t));
 void				ft_twlstadd(t_twlist **alst, t_twlist *new);
 void				ft_twlstiter(t_twlist *lst, void (*f)(t_twlist *elem));
 void				ft_twlstclr(t_twlist **alst);
+void				ft_twlstdel_backw(t_twlist **alltwlist,
+												void (*del)(void *, size_t));
 
 #endif

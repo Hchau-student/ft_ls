@@ -13,11 +13,31 @@
 #include "../includes/ft_ls.h"
 #include "../libft/libft.h"
 
+int			flag_error(char *flag_or_filename)
+{
+	int		if_flag;
+
+	if_flag = recodnise_flag(flag_or_filename);
+	if (flag_or_filename && if_flag != -2)
+	{
+		if ((is_filename(flag_or_filename)) == -1)
+		{
+			write(1, "illegal option -- ", 18);
+			ft_putchar(flag_or_filename[if_flag]);
+			write(1, "\n", 1);
+			write(1, "usage: ft_ls [-Ralrt] [file ...]\n", 33);
+			return (1);
+		}
+	}
+	return (0);
+}
+
 int			recodnise_flag(char *flag_line)
 {
 	int		i;
 
-	if (flag_line[0] && flag_line[0] != '-')
+	if ((flag_line[0] && flag_line[0] != '-') ||
+		(flag_line[0] && !(flag_line[1])))
 		return (-1);
 	i = 1;
 	while (flag_line[i])

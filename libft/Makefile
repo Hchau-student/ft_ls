@@ -70,6 +70,7 @@ ft_twlstadd.c \
 ft_twlstiter.c \
 ft_twlstmap.c \
 ft_twlstclr.c \
+ft_twlstdel_backw.c \
 
 OBJ = ft_memset.o \
 ft_bzero.o \
@@ -143,6 +144,7 @@ ft_twlstadd.o \
 ft_twlstiter.o \
 ft_twlstmap.o \
 ft_twlstclr.o \
+ft_twlstdel_backw.o \
 
 FLAGS = -Wall -Werror -Wextra
 

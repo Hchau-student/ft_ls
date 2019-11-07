@@ -38,17 +38,25 @@ void		put_names(t_twlist *lst, int total)
 	}
 }
 
-int			start_the_programm(char *filename)
+int			start_the_programm(char *filename, int num)
 {
 	t_twlist		*first_look;
 	int				total;
 
+	if (num != 0)
+	{
+		ft_putstr(filename);
+		ft_putstr(":\n");
+	}
+	if (recodnise_dirname(filename, DIR_EXIST) != DIR_EXIST)
+		return (0);
 	if ((total = simple_ls(filename, &first_look, filename)) == -1)
 		return (0);
 	put_names(first_look, total);
 	if (g_recoursive_flag == 1)
 		if ((recoursive_ls(first_look, filename)) == -1)
 			ft_putendl("Error read");
-	ft_twlstdel(&first_look, clear_filenode);
+	if (first_look != NULL)
+		ft_twlstdel(&first_look, clear_filenode);
 	return (0);
 }
