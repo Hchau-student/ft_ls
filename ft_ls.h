@@ -29,33 +29,40 @@
 # define PERMISSION		0
 # define DIR_EXIST		-2
 # define TWLST_CONTENT	t_filenode *
+# define HULF_YEAR		15811200
 
-int					g_recoursive_flag;
-int					g_rev_flag;
-int					g_t_flag;
-int					g_l_flag;
-int					g_a_flag;
+char				g_recoursive_flag;
+char				g_rev_flag;
+char				g_t_flag;
+char				g_l_flag;
+char				g_a_flag;
 
-int					g_delim_links;
-int					g_delim_uid;
-int					g_delim_grid;
-int					g_delim_size;
+short int			g_delim_links;
+short int			g_delim_uid;
+short int			g_delim_grid;
+short int			g_delim_size;
 
 typedef struct		s_filenode
 {
 	char			*name;
-	int				type_of_file;
+	char			type_of_file;
 	time_t			mod_time;
 	int				access;
 	char			*amounths_of_links;
-	struct passwd	*user;
-	struct group	*group;
+//	struct passwd	*user;
+//	struct group	*group;
 	char			*username;
 	char			*groupname;
 	char			*size;
 	int				extraaccess;
 	char			*name_for_link;
 }					t_filenode;
+
+typedef struct		s_dirnode
+{
+	char			*name;
+	time_t			mod_time;
+}					t_dirnode;
 
 /*
 **					add to libtf
@@ -128,6 +135,7 @@ int					get_all_unexist(t_twlist *dirnames);
 */
 void				clear_filenode(void *file, size_t size);
 void				clear_filenode_name(void *file, size_t size);
+void 				clear_l_in_recoursive(t_twlist **file);
 /*
 **					max_len
 */

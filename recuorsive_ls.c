@@ -25,14 +25,18 @@ int		get_next_dir(char *dirname, char *name)
 {
 	int			total;
 	t_twlist	*all_files;
+	t_twlist	*to_clear;
 
 	if ((total = simple_ls(dirname, &all_files, name)) == -1)
 	{
 		return (-1);
 	}
 	print_dir(dirname, all_files, total);
+	to_clear = all_files;
+	clear_l_in_recoursive(&to_clear);
+	all_files = to_clear;
 	recoursive_ls(all_files, dirname);
-	ft_twlstdel(&all_files, clear_filenode);
+	ft_twlstdel(&all_files, clear_filenode_name);
 	return (0);
 }
 

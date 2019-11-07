@@ -46,6 +46,7 @@ void		write_else(t_filenode *here)
 {
 	char	**time_res;
 	int		i;
+	time_t 	now;
 
 	print_with_spaces(g_delim_links,
 			ft_strlen(here->amounths_of_links), here->amounths_of_links);
@@ -60,8 +61,17 @@ void		write_else(t_filenode *here)
 	print_with_spaces(2, ft_strlen(time_res[2]), time_res[2]);
 	i = 0;
 	ft_putchar(' ');
-	while ((time_res[3] + i) != (ft_strrchr(time_res[3], ':')))
-		ft_putchar(time_res[3][i++]);
+	if (time(&now) - here->mod_time > HULF_YEAR)
+	{
+		ft_putchar(' ');
+		while ((ft_isdigit(time_res[4][i])))
+			ft_putchar(time_res[4][i++]);
+	}
+	else
+	{
+		while ((time_res[3] + i) != (ft_strrchr(time_res[3], ':')))
+			ft_putchar(time_res[3][i++]);
+	}
 	ft_freematr(time_res);
 }
 

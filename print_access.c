@@ -60,8 +60,10 @@ void	print_type_and_access(t_filenode *file_info)
 		type = 'p';
 	ft_putchar(type);
 	print_access(file_info->access);
-	if (file_info->extraaccess != 1)
-		ft_putchar(' ');
+	if ((file_info)->extraaccess > 0)
+		ft_putchar('@');
+//	else if (что?????)
+//		ft_putchar('+');
 	else
 		ft_putchar(' ');
 }

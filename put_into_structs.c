@@ -21,13 +21,15 @@ void			create_extrainf(char *name, struct stat box, t_filenode **info)
 	(*info)->mod_time = box.st_mtime;
 	(*info)->access = box.st_mode;
 	(*info)->amounths_of_links = ft_itoa(box.st_nlink);
-	(*info)->user = getpwuid(box.st_uid);
-	(*info)->group = getgrgid(box.st_gid);
+//	(*info)->user = getpwuid(box.st_uid);
+//	(*info)->group = getgrgid(box.st_gid);
 	(*info)->size = ft_itoa(box.st_size);
-	(*info)->username = ft_strdup((*info)->user->pw_name);
-	(*info)->groupname = ft_strdup((*info)->group->gr_name);
-	listxattr(name, buf, 1024, XATTR_NOFOLLOW) > 0 ?
-									(*info)->extraaccess = 1 : 0;
+	(*info)->username = ft_strdup((getpwuid(box.st_uid))->pw_name);
+	(*info)->groupname = ft_strdup((getgrgid(box.st_gid))->gr_name);
+	//разобраться
+	(*info)->extraaccess = listxattr(name, buf, 1024, XATTR_NOFOLLOW);
+//			> 0 ?
+//									(*info)->extraaccess = 1 : 0;
 	count_max_len(*info);
 }
 

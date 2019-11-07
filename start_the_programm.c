@@ -22,13 +22,13 @@ void		put_names(t_twlist *lst, int total)
 		print_total(total);
 	while (lst)
 	{
-		if (g_l_flag == 1)
+		if (g_l_flag == 1 && total != -2)
 		{
 			print_extra_info(lst);
 			ft_putchar(' ');
 		}
 		ft_putstr(((t_filenode *)lst->content)->name);
-		if (g_l_flag == 1)
+		if (g_l_flag == 1 && total != -2)
 		{
 			if (((t_filenode *)lst->content)->type_of_file == 10)
 				print_link(((t_filenode *)lst->content)->name_for_link);

@@ -31,7 +31,7 @@ void		sort(t_twlist **filenode)
 
 void		swap_list_filenodes(t_twlist *one, t_twlist *two)
 {
-	t_filenode		*tmp;
+	TWLST_CONTENT		tmp;
 
 	if (!one || !two)
 		return ;
