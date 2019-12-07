@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include <stdio.h>
-#include "../libft/libft.h"
 
 void		put_names(t_twlist *lst, int total)
 {

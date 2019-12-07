@@ -153,16 +153,16 @@ INCLUDES = libft.h
 NAME = libft.a
 
 $(NAME):
-		gcc -c $(FLAGS) -I $(INCLUDES) $(FILES)
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
+		@gcc -c $(FLAGS) -I $(INCLUDES) $(FILES)
+		@ar rc $(NAME) $(OBJ)
+		@ranlib $(NAME)
 
 all: $(NAME)
 
 clean:
-		/bin/rm -Rf $(OBJ)
+		@/bin/rm -Rf $(OBJ)
 
 fclean:	clean
-		/bin/rm -Rf $(NAME)
+		@/bin/rm -Rf $(NAME)
 
 re:	fclean all

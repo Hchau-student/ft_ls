@@ -11,37 +11,82 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include "../libft/libft.h"
-#include <dirent.h>
 
-int		reading_from_directories(DIR *dir_fd, char *name,
+int			put_reading_result(char *d_name, int d_type, char **name,
+													t_filenode **file_inf)
+{
+	int		check_return;
+	char	*full_name;
+
+	if (!d_name)
+		return (-1);
+	if (!d_name[0])
+		return (-1);
+	if (!(full_name = ft_strjoin(*name, d_name)))
+		return (-1);
+	if ((check_return = create_simplenode(d_type,
+										d_name, full_name, file_inf)) == -1)
+	{
+		if (*name != NULL)
+			ft_strdel(name);
+		if (full_name != NULL)
+			ft_strdel(&full_name);
+		if (*file_inf != NULL)
+			free(*file_inf);
+		return (-1);
+	}
+	if (full_name != NULL)
+		ft_strdel(&full_name);
+	return (check_return);
+}
+
+char		*get_name(char *name)
+{
+	if (!name)
+		return (NULL);
+	if ((ft_strcmp(name, "/")) != 0)
+		return ((ft_strjoin(name, "/")));
+	return (ft_strdup(name));
+}
+
+static int	free_and_return(char **name, t_twlist **dir_content, int total)
+{
+	if (*name)
+		ft_strdel(name);
+	if (dir_content != NULL)
+		sort(dir_content);
+	return (total);
+}
+
+int			reading_from_directories(DIR *dir_fd, char *name,
 												t_twlist **dir_content)
 {
 	struct dirent	*res;
 	t_filenode		*file_inf;
-	char			*full_name;
 	int				total;
+	int				check_return;
 
 	*dir_content = NULL;
-	name = ft_strjoin(name, "/");
+	if (!(name = get_name(name)))
+		return (-1);
 	total = 0;
 	while ((res = readdir(dir_fd)))
 	{
+		file_inf = NULL;
 		if (g_a_flag == 0 && res->d_name[0] == '.')
 			continue ;
-		full_name = ft_strjoin(name, res->d_name);
-		total += create_simplenode(res->d_type,
-				res->d_name, full_name, &file_inf);
+		if ((check_return = put_reading_result(res->d_name,
+						res->d_type, &name, &file_inf)) == -1)
+			return (-1);
+		total += check_return;
 		ft_twlstpush(dir_content, ft_twlstnew(file_inf, sizeof(t_filenode)));
-		free(file_inf);
-		ft_strdel(&full_name);
+		if (file_inf != NULL)
+			free(file_inf);
 	}
-	ft_strdel(&name);
-	sort(dir_content);
-	return (total);
+	return (free_and_return(&name, dir_content, total));
 }
 
-int		simple_ls(char *name, t_twlist **dir_content, char *short_name)
+int			simple_ls(char *name, t_twlist **dir_content, char *short_name)
 {
 	DIR			*dir_fd;
 	int			total;

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include "../libft/libft.h"
 
 void				get_dir_time(t_twlist **dirname)
 {

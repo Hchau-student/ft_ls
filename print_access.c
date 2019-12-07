@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include "../libft/libft.h"
 
 void	print_spaces(int amount)
 {
@@ -62,8 +61,6 @@ void	print_type_and_access(t_filenode *file_info)
 	print_access(file_info->access);
 	if ((file_info)->extraaccess > 0)
 		ft_putchar('@');
-//	else if (что?????)
-//		ft_putchar('+');
 	else
 		ft_putchar(' ');
 }

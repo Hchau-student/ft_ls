@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/stat.h>
 #include "../includes/ft_ls.h"
-#include <stdio.h>
-#include <time.h>
-#include "../libft/libft.h"
 
 int		cmp_filenode_name(t_filenode *one, t_filenode *two)
 {

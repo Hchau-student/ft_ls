@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include <stdlib.h>
 
 void	print_dir(char *dirname, t_twlist *dir, int total)
 {
@@ -28,15 +27,12 @@ int		get_next_dir(char *dirname, char *name)
 	t_twlist	*to_clear;
 
 	if ((total = simple_ls(dirname, &all_files, name)) == -1)
-	{
 		return (-1);
-	}
 	print_dir(dirname, all_files, total);
 	to_clear = all_files;
-	clear_l_in_recoursive(&to_clear);
 	all_files = to_clear;
 	recoursive_ls(all_files, dirname);
-	ft_twlstdel(&all_files, clear_filenode_name);
+	ft_twlstdel(&all_files, clear_filenode);
 	return (0);
 }
 
@@ -45,7 +41,10 @@ int		recoursive_ls(t_twlist *all_files, char *name)
 	char		*path;
 	char		*tmp;
 
-	path = ft_strjoin(name, "/");
+	if (!(ft_strcmp(name, "/")))
+		path = ft_strdup(name);
+	else
+		path = ft_strjoin(name, "/");
 	while (all_files)
 	{
 		if (((t_filenode *)all_files->content)->type_of_file == FOLDER)

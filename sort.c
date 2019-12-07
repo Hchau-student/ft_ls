@@ -16,9 +16,9 @@ void		sort(t_twlist **filenode)
 {
 	if (!filenode || !*filenode)
 		return ;
-	if (g_rev_flag == 0)
+	if (g_rev_flag == 0 && !g_t_flag)
 		sorting(filenode, cmp_filenode_name);
-	if (g_rev_flag == 1)
+	if (g_rev_flag == 1 && !g_t_flag)
 		sorting(filenode, cmp_filenode_name_rev);
 	if (g_t_flag == 1)
 	{
@@ -31,11 +31,11 @@ void		sort(t_twlist **filenode)
 
 void		swap_list_filenodes(t_twlist *one, t_twlist *two)
 {
-	TWLST_CONTENT		tmp;
+	t_filenode		*tmp;
 
 	if (!one || !two)
 		return ;
-	tmp = ((TWLST_CONTENT)one->content);
+	tmp = ((t_filenode *)one->content);
 	one->content = two->content;
 	two->content = tmp;
 }

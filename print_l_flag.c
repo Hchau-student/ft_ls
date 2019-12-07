@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include <stdio.h>
-#include "../libft/libft.h"
 
 void		print_link(char *name)
 {
@@ -21,18 +19,27 @@ void		print_link(char *name)
 		ft_putstr(name);
 }
 
-void		print_with_spaces(int c, int len, char *str)
+void		print_with_spaces(int c, int len, char *str, char side)
 {
 	if (c < len)
 		return ;
-	if (c < 0)
-		return ;
-	while (c >= len)
+	if (side == 'r')
 	{
-		ft_putchar(' ');
-		len++;
+		while (c >= len)
+		{
+			ft_putchar(' ');
+			len++;
+		}
 	}
 	ft_putstr(str);
+	if (side == 'l')
+	{
+		while (c >= len)
+		{
+			ft_putchar(' ');
+			len++;
+		}
+	}
 }
 
 void		print_total(int total)
@@ -44,35 +51,17 @@ void		print_total(int total)
 
 void		write_else(t_filenode *here)
 {
-	char	**time_res;
-	int		i;
-	time_t 	now;
-
 	print_with_spaces(g_delim_links,
-			ft_strlen(here->amounths_of_links), here->amounths_of_links);
-	print_with_spaces(g_delim_uid,
-			ft_strlen(here->username), here->username);
-	print_with_spaces(g_delim_grid + 1,
-			ft_strlen(here->groupname), here->groupname);
-	print_with_spaces(g_delim_size + 1,
-			ft_strlen(here->size), here->size);
-	time_res = ft_strsplit(ctime(&(here->mod_time)), ' ');
-	print_with_spaces(3, 3, time_res[1]);
-	print_with_spaces(2, ft_strlen(time_res[2]), time_res[2]);
-	i = 0;
+			ft_strlen(here->amounths_of_links), here->amounths_of_links, 'r');
 	ft_putchar(' ');
-	if (time(&now) - here->mod_time > HULF_YEAR)
-	{
-		ft_putchar(' ');
-		while ((ft_isdigit(time_res[4][i])))
-			ft_putchar(time_res[4][i++]);
-	}
-	else
-	{
-		while ((time_res[3] + i) != (ft_strrchr(time_res[3], ':')))
-			ft_putchar(time_res[3][i++]);
-	}
-	ft_freematr(time_res);
+	print_with_spaces(g_delim_uid,
+			ft_strlen(here->username), here->username, 'l');
+	ft_putchar(' ');
+	print_with_spaces(g_delim_grid,
+			ft_strlen(here->groupname), here->groupname, 'l');
+	print_with_spaces(g_delim_size,
+			ft_strlen(here->size), here->size, 'r');
+	print_time(here->mod_time);
 }
 
 void		print_extra_info(t_twlist *lst)

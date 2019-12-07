@@ -12,23 +12,24 @@
 
 #ifndef FT_LS_H
 # define FT_LS_H
-
 # include "../libft/libft.h"
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <dirent.h>
+# include <stdlib.h>
 # include <time.h>
 # include <pwd.h>
 # include <grp.h>
 # include <sys/xattr.h>
-# include <unistd.h>
-
 # define FOLDER			4
 # define LINK_TYPE		10
 # define NONEXIST		-1
 # define PERMISSION		0
 # define DIR_EXIST		-2
-# define TWLST_CONTENT	t_filenode *
+
+/*
+**		amounght of seconds in half of an year
+*/
 # define HULF_YEAR		15811200
 
 char				g_recoursive_flag;
@@ -49,8 +50,6 @@ typedef struct		s_filenode
 	time_t			mod_time;
 	int				access;
 	char			*amounths_of_links;
-//	struct passwd	*user;
-//	struct group	*group;
 	char			*username;
 	char			*groupname;
 	char			*size;
@@ -67,7 +66,6 @@ typedef struct		s_dirnode
 /*
 **					add to libtf
 */
-void				ft_lstpush(t_twlist **beginlist, t_list *add);
 void				ft_twlstpush(t_twlist **beginlist, t_twlist *add);
 
 /*
@@ -108,7 +106,7 @@ int					create_simplenode(int	type, char *name,
 											char *full_name, t_filenode **new);
 void				create_extrainf(char *name, struct stat box,
 															t_filenode **info);
-
+int					get_l_flag(t_filenode **new, char *full_name, int type);
 /*
 **					print
 */
@@ -116,8 +114,9 @@ void				put_names(t_twlist *lst, int total);
 void				print_extra_info(t_twlist *lst);
 void				print_type_and_access(t_filenode *file_info);
 void				print_total(int	total);
-void				print_with_spaces(int	c, int	len, char *str);
+void				print_with_spaces(int	c, int	len, char *str, char side);
 void				print_link(char *name);
+void				print_time(time_t mod_time);
 
 /*
 **			 		working with wrong dirname
@@ -135,7 +134,7 @@ int					get_all_unexist(t_twlist *dirnames);
 */
 void				clear_filenode(void *file, size_t size);
 void				clear_filenode_name(void *file, size_t size);
-void 				clear_l_in_recoursive(t_twlist **file);
+
 /*
 **					max_len
 */

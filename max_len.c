@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include <stdio.h>
-#include "../libft/libft.h"
 
 void		fill_len_nuls(int count)
 {

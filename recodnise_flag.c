@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ls.h"
-#include "../libft/libft.h"
 
 int			flag_error(char *flag_or_filename)
 {
