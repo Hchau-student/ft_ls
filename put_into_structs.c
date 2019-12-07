@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "ft_ls.h"
 
 void			prepare_struct(t_filenode **prepare)
 {

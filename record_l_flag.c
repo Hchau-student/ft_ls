@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "ft_ls.h"
 
 static int		free_and_return(t_filenode **to_free)
 {

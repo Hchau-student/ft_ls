@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "ft_ls.h"
 
 void		fill_len_nuls(int count)
 {

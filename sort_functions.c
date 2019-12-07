@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "ft_ls.h"
 
 int		cmp_filenode_name(t_filenode *one, t_filenode *two)
 {

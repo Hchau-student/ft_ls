@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "ft_ls.h"
 
 void		put_names(t_twlist *lst, int total)
 {

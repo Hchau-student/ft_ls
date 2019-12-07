@@ -1,5 +1,4 @@
-#include "../includes/ft_ls.h"
-#include "../libft/libft.h"
+#include "ft_ls.h"
 
 void    recodnise_dirname(char *name)
 {

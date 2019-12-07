@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ls.h"
+#include "ft_ls.h"
 
 int			put_reading_result(char *d_name, int d_type, char **name,
 													t_filenode **file_inf)

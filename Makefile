@@ -1,6 +1,6 @@
 LS = ft_ls
 CC = gcc -Wall -Wextra -Werror
-SRC_DIR = srcs/
+SRC_DIR = ./
 LIBFT_DIR = libft/
 OBJ_DIR = obj/
 
@@ -15,15 +15,19 @@ all: $(LS)
 
 $(addprefix $(OBJ_DIR), %.o): $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) -I libft/ -I include/ -c -o $@ $^
+	@$(CC) -I libft/ -I ./ -c -o $@ $^
 
 $(LS): $(addprefix $(OBJ_DIR), $(LS_OBJ))
 	@make -C $(LIBFT_DIR)
 	@$(CC) $(addprefix $(OBJ_DIR), $(LS_OBJ)) $(LIBFT_DIR)libft.a -I libft/ -I include/ -o $(LS)
+	@echo "\033[38;2;139;20;39m A \033[38;2;190;60;0m L \033[38;2;255;156;0m L \
+	\033[38;2;252;210;0m   D \033[38;2;60;160;50m O \033[38;2;32;80;250m N \033[38;2;200;8;250m E \033[0m"
 
 clean:
 	@make -C $(LIBFT_DIR) clean
 	@rm -rf $(OBJ_DIR)
+	@echo "\033[38;2;139;20;39m A \033[38;2;190;60;0m L \033[38;2;255;156;0m L \
+	\033[38;2;252;210;0m   C \033[38;2;60;160;50m L \033[36m E \033[38;2;32;80;250m A \033[38;2;200;8;250m N \033[0m"
 
 fclean: clean
 	@make -C $(LIBFT_DIR) fclean
