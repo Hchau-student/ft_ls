@@ -32,6 +32,7 @@ ft_memchr.c \
 ft_memcmp.c \
 ft_strdup.c \
 ft_strcpy.c \
+ft_strcpy_return.c \
 ft_strncpy.c \
 ft_strcat.c \
 ft_strncat.c \

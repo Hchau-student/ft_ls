@@ -44,6 +44,7 @@ short int			g_delim_links;
 short int			g_delim_uid;
 short int			g_delim_grid;
 short int			g_delim_size;
+short int           g_name_delimiter;
 
 typedef struct		s_filenode
 {

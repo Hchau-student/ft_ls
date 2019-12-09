@@ -36,6 +36,67 @@ void		put_names(t_twlist *lst, int total)
 	}
 }
 
+int count_nodes(t_twlist *names)
+{
+    t_twlist *tmp;
+    int i;
+
+    tmp = names;
+    i = 0;
+    while (tmp)
+    {
+        tmp->next;
+        i++;
+    }
+    return (i);
+}
+
+int fill_with_spaces(char *buff)
+{
+    int i;
+
+    i = 0;
+    buff[i] = ' ';
+    i++;
+
+    while (buff[i] != '\0')
+    {
+        if (i % g_name_delimiter == 0)
+            buff[i] = '\n';
+        else
+            buff[i] = ' ';
+        i++;
+    }
+    return (i);
+}
+
+void multicoloumns(t_twlist *names)
+{
+    int i;
+    int k;
+    int spaces;
+    char *buff;
+    char *extra;
+
+    i = count_nodes(names);
+    if(!(buff = (char *)malloc(i * (g_name_delimiter + 2))))
+        return ;
+    spaces = fill_with_spaces(buff);
+    extra = buff;
+    while (names)
+    {
+        extra = ft_strcpy_return(extra,((t_filenode *)names->content)->name);
+
+//        spaces = g_name_delimiter - spaces;
+//        while(spaces != 1)
+//        {
+//            *extra = ' ';
+//            spaces--;
+//        }
+        names = names->next;
+    }
+}
+
 int			start_the_programm(char *filename, int num)
 {
 	t_twlist		*first_look;
