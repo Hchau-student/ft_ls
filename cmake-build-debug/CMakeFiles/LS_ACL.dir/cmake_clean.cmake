@@ -79,7 +79,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/LS_ACL.dir/print_l_flag.c.o"
   "CMakeFiles/LS_ACL.dir/print_time.c.o"
   "CMakeFiles/LS_ACL.dir/put_into_structs.c.o"
-  "CMakeFiles/LS_ACL.dir/R_flag.c.o"
   "CMakeFiles/LS_ACL.dir/recodnise_flag.c.o"
   "CMakeFiles/LS_ACL.dir/record_l_flag.c.o"
   "CMakeFiles/LS_ACL.dir/recuorsive_ls.c.o"

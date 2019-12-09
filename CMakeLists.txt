@@ -89,7 +89,6 @@ add_executable(LS_ACL
         print_l_flag.c
         print_time.c
         put_into_structs.c
-        R_flag.c
         recodnise_flag.c
         record_l_flag.c
         recuorsive_ls.c

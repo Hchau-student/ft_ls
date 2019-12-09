@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mflannel/Desktop/LS_ACL/R_flag.c">
-			<Option target="LS_ACL"/>
-		</Unit>
 		<Unit filename="/Users/mflannel/Desktop/LS_ACL/cleaning_up.c">
 			<Option target="LS_ACL"/>
 		</Unit>

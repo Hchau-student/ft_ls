@@ -123,33 +123,6 @@ LS_ACL/fast:
 	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/build
 .PHONY : LS_ACL/fast
 
-R_flag.o: R_flag.c.o
-
-.PHONY : R_flag.o
-
-# target to build an object file
-R_flag.c.o:
-	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/R_flag.c.o
-.PHONY : R_flag.c.o
-
-R_flag.i: R_flag.c.i
-
-.PHONY : R_flag.i
-
-# target to preprocess a source file
-R_flag.c.i:
-	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/R_flag.c.i
-.PHONY : R_flag.c.i
-
-R_flag.s: R_flag.c.s
-
-.PHONY : R_flag.s
-
-# target to generate assembly for a file
-R_flag.c.s:
-	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/R_flag.c.s
-.PHONY : R_flag.c.s
-
 cleaning_up.o: cleaning_up.c.o
 
 .PHONY : cleaning_up.o
@@ -2508,9 +2481,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... LS_ACL"
-	@echo "... R_flag.o"
-	@echo "... R_flag.i"
-	@echo "... R_flag.s"
 	@echo "... cleaning_up.o"
 	@echo "... cleaning_up.i"
 	@echo "... cleaning_up.s"
