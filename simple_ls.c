@@ -69,6 +69,7 @@ int			reading_from_directories(DIR *dir_fd, char *name,
 	*dir_content = NULL;
 	if (!(name = get_name(name)))
 		return (-1);
+    name[ft_strlen(name) - 1] = '\0';
 	total = 0;
 	while ((res = readdir(dir_fd)))
 	{

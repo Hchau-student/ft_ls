@@ -20,6 +20,14 @@ void			prepare_struct(t_filenode **prepare)
 	(*prepare)->size = NULL;
 	(*prepare)->username = NULL;
 	(*prepare)->groupname = NULL;
+    (*prepare)->fullname = NULL;
+}
+
+char *cut_slash(char *full_name)
+{
+   char *res = full_name;
+   res++;
+   return (res);
 }
 
 int				create_simplenode(int type, char *name, char *full_name,
@@ -29,6 +37,7 @@ int				create_simplenode(int type, char *name, char *full_name,
 	prepare_struct(new);
 	(*new)->type_of_file = type;
 	(*new)->name = ft_strdup(name);
+    (*new)->fullname = ft_strdup(full_name);
 	if (g_l_flag || g_t_flag)
 		return (get_l_flag(new, full_name, type));
 	return (0);

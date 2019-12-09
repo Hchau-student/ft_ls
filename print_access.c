@@ -12,6 +12,7 @@
 
 #include "ft_ls.h"
 
+
 void	print_spaces(int amount)
 {
 	while (amount--)
@@ -40,6 +41,21 @@ void	print_access(int access)
 		S_IXOTH & access ? ft_putchar('x') : ft_putchar('-');
 }
 
+int if_acl(char *fullname)
+{
+    acl_t		bool_acl;
+
+    bool_acl = acl_get_link_np(fullname, ACL_TYPE_EXTENDED);
+    if (!bool_acl)
+    {
+        acl_free(bool_acl);
+        bool_acl = NULL;
+    }
+    if (bool_acl)
+        return (1);
+    return (0);
+}
+
 void	print_type_and_access(t_filenode *file_info)
 {
 	char	type;
@@ -61,6 +77,8 @@ void	print_type_and_access(t_filenode *file_info)
 	print_access(file_info->access);
 	if ((file_info)->extraaccess > 0)
 		ft_putchar('@');
+    else if(if_acl(file_info->fullname))
+        ft_putchar('+');
 	else
 		ft_putchar(' ');
 }

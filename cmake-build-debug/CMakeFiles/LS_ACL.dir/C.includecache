@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mflannel/Desktop/LS_ACL/ft_ls.h
+libft/libft.h
+/Users/mflannel/Desktop/LS_ACL/libft/libft.h
+sys/types.h
+-
+sys/stat.h
+-
+dirent.h
+-
+stdlib.h
+-
+time.h
+-
+pwd.h
+-
+grp.h
+-
+sys/xattr.h
+-
+sys/acl.h
+-
+
+/Users/mflannel/Desktop/LS_ACL/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/Users/mflannel/Desktop/LS_ACL/print_access.c
+ft_ls.h
+/Users/mflannel/Desktop/LS_ACL/ft_ls.h
+

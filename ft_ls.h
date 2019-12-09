@@ -21,6 +21,7 @@
 # include <pwd.h>
 # include <grp.h>
 # include <sys/xattr.h>
+# include <sys/acl.h>
 # define FOLDER			4
 # define LINK_TYPE		10
 # define NONEXIST		-1
@@ -55,6 +56,7 @@ typedef struct		s_filenode
 	char			*size;
 	int				extraaccess;
 	char			*name_for_link;
+	char            *fullname;
 }					t_filenode;
 
 typedef struct		s_dirnode
