@@ -27,6 +27,7 @@
 # define NONEXIST		-1
 # define PERMISSION		0
 # define DIR_EXIST		-2
+# define BUFFSIZE       1500
 
 /*
 **		amounght of seconds in half of an year
