@@ -32,7 +32,7 @@
 /*
 **		amounght of seconds in half of an year
 */
-# define HULF_YEAR		15811200
+# define HULF_YEAR		15711200
 
 char				g_recoursive_flag;
 char				g_rev_flag;
@@ -61,11 +61,11 @@ typedef struct		s_filenode
 	char            *fullname;
 }					t_filenode;
 
-typedef struct		s_dirnode
+typedef struct		s_presort
 {
-	char			*name;
-	time_t			mod_time;
-}					t_dirnode;
+	int 			index;
+	void			*content;
+}					t_presort;
 
 /*
 **					add to libtf
