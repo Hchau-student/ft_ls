@@ -564,9 +564,35 @@ CMakeFiles/LS_ACL.dir/libft/ft_strcpy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_ACL.dir/libft/ft_strcpy.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy.c -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy.c.s
 
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o: CMakeFiles/LS_ACL.dir/flags.make
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o: ../libft/ft_strcpy_return.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c
+
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c > CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.i
+
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s
+
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o: CMakeFiles/LS_ACL.dir/flags.make
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o: ../libft/ft_strcpy_return_noterm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return_noterm.c
+
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return_noterm.c > CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.i
+
+CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return_noterm.c -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.s
+
 CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strdel.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.i: cmake_force
@@ -579,7 +605,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strdup.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.i: cmake_force
@@ -592,7 +618,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o: ../libft/ft_strequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strequ.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.i: cmake_force
@@ -605,7 +631,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_striter.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_striter.c.o: ../libft/ft_striter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_striter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_striter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_striter.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_striter.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_striter.c.i: cmake_force
@@ -618,7 +644,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_striter.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.o: ../libft/ft_striteri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_striteri.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.i: cmake_force
@@ -631,7 +657,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_striteri.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strjoin.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.i: cmake_force
@@ -644,7 +670,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strjoin.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strlcat.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.i: cmake_force
@@ -657,7 +683,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strlcat.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strlen.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.i: cmake_force
@@ -670,7 +696,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strlen.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.o: ../libft/ft_strmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strmap.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.i: cmake_force
@@ -683,7 +709,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strmap.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.o: ../libft/ft_strmapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strmapi.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.i: cmake_force
@@ -696,7 +722,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strmapi.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.o: ../libft/ft_strncat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strncat.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.i: cmake_force
@@ -709,7 +735,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strncat.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.o: ../libft/ft_strncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strncmp.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.i: cmake_force
@@ -722,7 +748,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strncmp.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.o: ../libft/ft_strncpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strncpy.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.i: cmake_force
@@ -735,7 +761,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strncpy.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.o: ../libft/ft_strnequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strnequ.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.i: cmake_force
@@ -748,7 +774,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strnequ.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.o: ../libft/ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strnew.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.i: cmake_force
@@ -761,7 +787,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strnew.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.o: ../libft/ft_strnstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strnstr.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.i: cmake_force
@@ -774,7 +800,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strnstr.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.o: ../libft/ft_strrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strrchr.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.i: cmake_force
@@ -787,7 +813,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strrchr.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.o: ../libft/ft_strsplit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strsplit.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.i: cmake_force
@@ -800,7 +826,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strsplit.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.o: ../libft/ft_strstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strstr.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.i: cmake_force
@@ -813,7 +839,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strstr.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.o: ../libft/ft_strsub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strsub.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.i: cmake_force
@@ -826,7 +852,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strsub.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.o: ../libft/ft_strtrim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strtrim.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.i: cmake_force
@@ -839,7 +865,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_strtrim.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_swap.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_swap.c.o: ../libft/ft_swap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_swap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_swap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_swap.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_swap.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_swap.c.i: cmake_force
@@ -852,7 +878,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_swap.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_tolower.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.i: cmake_force
@@ -865,7 +891,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_tolower.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_toupper.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.i: cmake_force
@@ -878,7 +904,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_toupper.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.o: ../libft/ft_twlstadd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstadd.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.i: cmake_force
@@ -891,7 +917,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstadd.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.o: ../libft/ft_twlstclr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstclr.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.i: cmake_force
@@ -904,7 +930,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstclr.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.o: ../libft/ft_twlstdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstdel.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.i: cmake_force
@@ -917,7 +943,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstdel.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.o: ../libft/ft_twlstdel_backw.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstdel_backw.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.i: cmake_force
@@ -930,7 +956,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstdel_backw.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.o: ../libft/ft_twlstdelone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstdelone.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.i: cmake_force
@@ -943,7 +969,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstdelone.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.o: ../libft/ft_twlstiter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstiter.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.i: cmake_force
@@ -956,7 +982,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstiter.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.o: ../libft/ft_twlstmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstmap.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.i: cmake_force
@@ -969,7 +995,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstmap.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.o: ../libft/ft_twlstnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_twlstnew.c
 
 CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.i: cmake_force
@@ -982,7 +1008,7 @@ CMakeFiles/LS_ACL.dir/libft/ft_twlstnew.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/cleaning_up.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/cleaning_up.c.o: ../cleaning_up.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/LS_ACL.dir/cleaning_up.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/LS_ACL.dir/cleaning_up.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/cleaning_up.c.o   -c /Users/mflannel/Desktop/LS_ACL/cleaning_up.c
 
 CMakeFiles/LS_ACL.dir/cleaning_up.c.i: cmake_force
@@ -995,7 +1021,7 @@ CMakeFiles/LS_ACL.dir/cleaning_up.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/get_index.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/get_index.c.o: ../get_index.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/LS_ACL.dir/get_index.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/LS_ACL.dir/get_index.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/get_index.c.o   -c /Users/mflannel/Desktop/LS_ACL/get_index.c
 
 CMakeFiles/LS_ACL.dir/get_index.c.i: cmake_force
@@ -1008,7 +1034,7 @@ CMakeFiles/LS_ACL.dir/get_index.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/if_direrror.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/if_direrror.c.o: ../if_direrror.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/LS_ACL.dir/if_direrror.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/LS_ACL.dir/if_direrror.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/if_direrror.c.o   -c /Users/mflannel/Desktop/LS_ACL/if_direrror.c
 
 CMakeFiles/LS_ACL.dir/if_direrror.c.i: cmake_force
@@ -1021,7 +1047,7 @@ CMakeFiles/LS_ACL.dir/if_direrror.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/little_helpers.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/little_helpers.c.o: ../little_helpers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/LS_ACL.dir/little_helpers.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/LS_ACL.dir/little_helpers.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/little_helpers.c.o   -c /Users/mflannel/Desktop/LS_ACL/little_helpers.c
 
 CMakeFiles/LS_ACL.dir/little_helpers.c.i: cmake_force
@@ -1034,7 +1060,7 @@ CMakeFiles/LS_ACL.dir/little_helpers.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/main.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/LS_ACL.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/LS_ACL.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/main.c.o   -c /Users/mflannel/Desktop/LS_ACL/main.c
 
 CMakeFiles/LS_ACL.dir/main.c.i: cmake_force
@@ -1047,7 +1073,7 @@ CMakeFiles/LS_ACL.dir/main.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/max_len.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/max_len.c.o: ../max_len.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/LS_ACL.dir/max_len.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/LS_ACL.dir/max_len.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/max_len.c.o   -c /Users/mflannel/Desktop/LS_ACL/max_len.c
 
 CMakeFiles/LS_ACL.dir/max_len.c.i: cmake_force
@@ -1060,7 +1086,7 @@ CMakeFiles/LS_ACL.dir/max_len.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/presort.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/presort.c.o: ../presort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/LS_ACL.dir/presort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/LS_ACL.dir/presort.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/presort.c.o   -c /Users/mflannel/Desktop/LS_ACL/presort.c
 
 CMakeFiles/LS_ACL.dir/presort.c.i: cmake_force
@@ -1073,7 +1099,7 @@ CMakeFiles/LS_ACL.dir/presort.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/print_access.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/print_access.c.o: ../print_access.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/LS_ACL.dir/print_access.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/LS_ACL.dir/print_access.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/print_access.c.o   -c /Users/mflannel/Desktop/LS_ACL/print_access.c
 
 CMakeFiles/LS_ACL.dir/print_access.c.i: cmake_force
@@ -1086,7 +1112,7 @@ CMakeFiles/LS_ACL.dir/print_access.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/print_err_arg.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/print_err_arg.c.o: ../print_err_arg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/LS_ACL.dir/print_err_arg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/LS_ACL.dir/print_err_arg.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/print_err_arg.c.o   -c /Users/mflannel/Desktop/LS_ACL/print_err_arg.c
 
 CMakeFiles/LS_ACL.dir/print_err_arg.c.i: cmake_force
@@ -1099,7 +1125,7 @@ CMakeFiles/LS_ACL.dir/print_err_arg.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/print_l_flag.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/print_l_flag.c.o: ../print_l_flag.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/LS_ACL.dir/print_l_flag.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/LS_ACL.dir/print_l_flag.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/print_l_flag.c.o   -c /Users/mflannel/Desktop/LS_ACL/print_l_flag.c
 
 CMakeFiles/LS_ACL.dir/print_l_flag.c.i: cmake_force
@@ -1112,7 +1138,7 @@ CMakeFiles/LS_ACL.dir/print_l_flag.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/print_time.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/print_time.c.o: ../print_time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/LS_ACL.dir/print_time.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/LS_ACL.dir/print_time.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/print_time.c.o   -c /Users/mflannel/Desktop/LS_ACL/print_time.c
 
 CMakeFiles/LS_ACL.dir/print_time.c.i: cmake_force
@@ -1125,7 +1151,7 @@ CMakeFiles/LS_ACL.dir/print_time.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/put_into_structs.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/put_into_structs.c.o: ../put_into_structs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/LS_ACL.dir/put_into_structs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/LS_ACL.dir/put_into_structs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/put_into_structs.c.o   -c /Users/mflannel/Desktop/LS_ACL/put_into_structs.c
 
 CMakeFiles/LS_ACL.dir/put_into_structs.c.i: cmake_force
@@ -1138,7 +1164,7 @@ CMakeFiles/LS_ACL.dir/put_into_structs.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/recodnise_flag.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/recodnise_flag.c.o: ../recodnise_flag.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/LS_ACL.dir/recodnise_flag.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/LS_ACL.dir/recodnise_flag.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/recodnise_flag.c.o   -c /Users/mflannel/Desktop/LS_ACL/recodnise_flag.c
 
 CMakeFiles/LS_ACL.dir/recodnise_flag.c.i: cmake_force
@@ -1151,7 +1177,7 @@ CMakeFiles/LS_ACL.dir/recodnise_flag.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/record_l_flag.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/record_l_flag.c.o: ../record_l_flag.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/LS_ACL.dir/record_l_flag.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/LS_ACL.dir/record_l_flag.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/record_l_flag.c.o   -c /Users/mflannel/Desktop/LS_ACL/record_l_flag.c
 
 CMakeFiles/LS_ACL.dir/record_l_flag.c.i: cmake_force
@@ -1164,7 +1190,7 @@ CMakeFiles/LS_ACL.dir/record_l_flag.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/recuorsive_ls.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/recuorsive_ls.c.o: ../recuorsive_ls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/LS_ACL.dir/recuorsive_ls.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/LS_ACL.dir/recuorsive_ls.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/recuorsive_ls.c.o   -c /Users/mflannel/Desktop/LS_ACL/recuorsive_ls.c
 
 CMakeFiles/LS_ACL.dir/recuorsive_ls.c.i: cmake_force
@@ -1177,7 +1203,7 @@ CMakeFiles/LS_ACL.dir/recuorsive_ls.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/simple_ls.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/simple_ls.c.o: ../simple_ls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/LS_ACL.dir/simple_ls.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/LS_ACL.dir/simple_ls.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/simple_ls.c.o   -c /Users/mflannel/Desktop/LS_ACL/simple_ls.c
 
 CMakeFiles/LS_ACL.dir/simple_ls.c.i: cmake_force
@@ -1190,7 +1216,7 @@ CMakeFiles/LS_ACL.dir/simple_ls.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/sort.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/sort.c.o: ../sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/LS_ACL.dir/sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/LS_ACL.dir/sort.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/sort.c.o   -c /Users/mflannel/Desktop/LS_ACL/sort.c
 
 CMakeFiles/LS_ACL.dir/sort.c.i: cmake_force
@@ -1203,7 +1229,7 @@ CMakeFiles/LS_ACL.dir/sort.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/sort_functions.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/sort_functions.c.o: ../sort_functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/LS_ACL.dir/sort_functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/LS_ACL.dir/sort_functions.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/sort_functions.c.o   -c /Users/mflannel/Desktop/LS_ACL/sort_functions.c
 
 CMakeFiles/LS_ACL.dir/sort_functions.c.i: cmake_force
@@ -1216,7 +1242,7 @@ CMakeFiles/LS_ACL.dir/sort_functions.c.s: cmake_force
 
 CMakeFiles/LS_ACL.dir/start_the_programm.c.o: CMakeFiles/LS_ACL.dir/flags.make
 CMakeFiles/LS_ACL.dir/start_the_programm.c.o: ../start_the_programm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/LS_ACL.dir/start_the_programm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/LS_ACL.dir/start_the_programm.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/start_the_programm.c.o   -c /Users/mflannel/Desktop/LS_ACL/start_the_programm.c
 
 CMakeFiles/LS_ACL.dir/start_the_programm.c.i: cmake_force
@@ -1226,19 +1252,6 @@ CMakeFiles/LS_ACL.dir/start_the_programm.c.i: cmake_force
 CMakeFiles/LS_ACL.dir/start_the_programm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_ACL.dir/start_the_programm.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mflannel/Desktop/LS_ACL/start_the_programm.c -o CMakeFiles/LS_ACL.dir/start_the_programm.c.s
-
-CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o: CMakeFiles/LS_ACL.dir/flags.make
-CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o: ../libft/ft_strcpy_return.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o   -c /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c
-
-CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c > CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.i
-
-CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c -o CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s
 
 # Object files for target LS_ACL
 LS_ACL_OBJECTS = \
@@ -1281,6 +1294,8 @@ LS_ACL_OBJECTS = \
 "CMakeFiles/LS_ACL.dir/libft/ft_strclr.c.o" \
 "CMakeFiles/LS_ACL.dir/libft/ft_strcmp.c.o" \
 "CMakeFiles/LS_ACL.dir/libft/ft_strcpy.c.o" \
+"CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o" \
+"CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o" \
 "CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o" \
 "CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o" \
 "CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o" \
@@ -1331,8 +1346,7 @@ LS_ACL_OBJECTS = \
 "CMakeFiles/LS_ACL.dir/simple_ls.c.o" \
 "CMakeFiles/LS_ACL.dir/sort.c.o" \
 "CMakeFiles/LS_ACL.dir/sort_functions.c.o" \
-"CMakeFiles/LS_ACL.dir/start_the_programm.c.o" \
-"CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o"
+"CMakeFiles/LS_ACL.dir/start_the_programm.c.o"
 
 # External object files for target LS_ACL
 LS_ACL_EXTERNAL_OBJECTS =
@@ -1376,6 +1390,8 @@ LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strchr.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strclr.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strcmp.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strcpy.c.o
+LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o
+LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o
@@ -1427,10 +1443,9 @@ LS_ACL: CMakeFiles/LS_ACL.dir/simple_ls.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/sort.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/sort_functions.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/start_the_programm.c.o
-LS_ACL: CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o
 LS_ACL: CMakeFiles/LS_ACL.dir/build.make
 LS_ACL: CMakeFiles/LS_ACL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Linking C executable LS_ACL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Linking C executable LS_ACL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LS_ACL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

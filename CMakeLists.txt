@@ -46,6 +46,8 @@ add_executable(LS_ACL
         libft/ft_strclr.c
         libft/ft_strcmp.c
         libft/ft_strcpy.c
+        libft/ft_strcpy_return.c
+        libft/ft_strcpy_return_noterm.c
         libft/ft_strdel.c
         libft/ft_strdup.c
         libft/ft_strequ.c
@@ -98,4 +100,4 @@ add_executable(LS_ACL
         simple_ls.c
         sort.c
         sort_functions.c
-        start_the_programm.c libft/ft_strcpy_return.c)
+        start_the_programm.c)

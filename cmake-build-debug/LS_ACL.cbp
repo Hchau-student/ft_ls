@@ -216,6 +216,9 @@
 		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c">
 			<Option target="LS_ACL"/>
 		</Unit>
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return_noterm.c">
+			<Option target="LS_ACL"/>
+		</Unit>
 		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strdel.c">
 			<Option target="LS_ACL"/>
 		</Unit>

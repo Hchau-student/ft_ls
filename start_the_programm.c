@@ -14,7 +14,7 @@ void		put_names(t_twlist *lst, int total)
 {
     if (!lst || !lst->content)
         return ;
-    if (g_l_flag == 1)
+    /*if (g_l_flag == 1)
         print_total(total);
     while (lst)
     {
@@ -31,14 +31,19 @@ void		put_names(t_twlist *lst, int total)
         }
         ft_putchar('\n');
         lst = lst->next;
-    }
+    }*/
+
+    multicoloumns(lst);
 }
-struct winsize *get_terminal_props(void)
+int get_terminal_props(void)
 {
-    struct winsize window;
-    struct winsize *window_ptr = &window;
-    ioctl(0, TIOCGWINSZ, &window_ptr);
-    return (window_ptr);
+    struct winsize ws;
+    int             num_col;
+
+    ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws);
+    num_col = 14;
+    num_col = (num_col) ? num_col : 1;
+    return (num_col);
 }
 int count_nodes(t_twlist *names)
 {
@@ -48,33 +53,37 @@ int count_nodes(t_twlist *names)
     i = 0;
     while (tmp)
     {
-        tmp->next;
+        tmp = tmp->next;
         i++;
     }
     return (i);
 }
-void fill_with_spaces(char *buff, unsigned short columns)
+void fill_with_spaces(char *buff, int size, int col_got)
 {
     int i;
     i = 0;
     buff[i] = ' ';
     i++;
-    while (buff[i] != '\0')
+    while (i != size)
     {
-        if (i % g_name_delimiter == 0 && i / columns == g_name_delimiter)
+        if (i % (col_got * (g_name_delimiter + 1) - col_got) == 0)
+        {
             buff[i] = '\n';
+        }
         else
             buff[i] = ' ';
         i++;
     }
+    buff[i] = '\0';
 }
-t_twlist *jump(unsigned short rows_got, t_twlist *name) //Прыгаем на элемент, который должен стоять в одной линии с текущим
+t_twlist *jump(t_twlist *name, int lines) //Прыгаем на элемент, который должен стоять в одной линии с текущим
 {
     t_twlist *current = name;
-    int nodes = count_nodes(name);
-    int lines = rows_got / nodes;
+
     while(lines != 0)
     {
+        if(current->next == NULL)
+            return (NULL);
         current = current->next;
         lines--;
     }
@@ -83,47 +92,61 @@ t_twlist *jump(unsigned short rows_got, t_twlist *name) //Прыгаем на э
 unsigned short get_field_props(unsigned short win_columns, int name_delimiter) //Считаем, сколько колонн у нас влезет
 {
     int columns_got = 1;
-    while ((((name_delimiter + 2) * columns_got) / win_columns) > 1)
+    if (win_columns == 0 || win_columns == NULL)
+    {
+        ft_putstr("Terminal is not opened");
+        exit(0);
+    }
+    while ((((name_delimiter + 1) * columns_got) / win_columns) < 1)
         columns_got++;
     return(columns_got);
 }
-void jump_back(t_twlist *names) //Прыгаем на элемент, идущий следующим после текущего
+t_twlist *jump_back(t_twlist *name, int lines) //Прыгаем на элемент, идущий следующим после текущего
 {
-    while(names->prev)
-        names = names->prev;
-    names->next;
+    {
+        t_twlist *current = name;
+
+        while(lines != 1)
+        {
+            if(current->prev == NULL)
+                return (NULL);
+            current = current->prev;
+            lines--;
+        }
+        return (current);
+    }
 }
 void multicoloumns(t_twlist *names)
 {
     int i;
     int c;
-    int rows_got;
+    int col_got = 0;
     char *buff;                                                                     //буффер
     char *extra;                                                                    //доп. указатель на буффер
-    struct winsize *win_props;                                                      //указатель на параметры окна
-    win_props = get_terminal_props();                                               //Вынимаем параметры окна
-    rows_got = get_field_props(win_props->ws_col, g_name_delimiter);                //считаем количество столбцов
+    int win_columns;                                                      //указатель на параметры окна
+    win_columns = get_terminal_props();                                               //Вынимаем параметры окна
+    col_got = get_field_props(win_columns, g_name_delimiter);                //считаем количество столбцов
     i = count_nodes(names);                                                         //Считаем количество имен
-    if(!(buff = (char *)malloc(i * (g_name_delimiter + 2))))                        //выделяем память под буффер
+    if(!(buff = (char *)malloc(i * (g_name_delimiter + 1))))                        //выделяем память под буффер
         return ;
-    fill_with_spaces(buff, win_props->ws_col);                                      //Заполняем буффер пробелами
+    fill_with_spaces(buff, i * (g_name_delimiter + 1), col_got);                                      //Заполняем буффер пробелами
     extra = buff;                                                                   //присваиваем доп. указателю адрес буффера
-    i = rows_got;
-    while (names)
-    {
-        while (i != 0)
+    i = ((count_nodes(names) / col_got));
+        while (names->next)
         {
-            c = g_name_delimiter -
-                ft_strlen(((t_filenode *) names->content)->name);                   //считаем, где начинается новая строчка
-            extra = ft_strcpy_return(extra,((t_filenode *) names->content)->name);  //заполняем текущ. имя в буффер
-            while (c != 0) {
-                extra++;
-                c--;
-            }
-            names = jump(rows_got, names);                                          //прыгаем на следующую колонку
-            jump_back(names);                                                       //Прыгаем назад + 1 вперед на след элемент
-            i--;
+        extra = ft_strcpy_return_noterm(extra,((t_filenode *) names->content)->name);
+        c = (g_name_delimiter) - ft_strlen(((t_filenode *) names->content)->name);
+        names = jump_back(names, i);
+        while (c != 0)
+        {
+            extra++;
+            c--;
         }
+        if ((*extra) == '\n')
+            extra++;
+        if(!(names = jump(names, i)))
+            ft_putstr(buff);
+                                                                                    //Прыгаем назад + 1 вперед на след элемеyn
     }
 }
 int			start_the_programm(char *filename, int num)

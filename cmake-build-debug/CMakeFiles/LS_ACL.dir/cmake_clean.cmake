@@ -38,6 +38,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LS_ACL.dir/libft/ft_strclr.c.o"
   "CMakeFiles/LS_ACL.dir/libft/ft_strcmp.c.o"
   "CMakeFiles/LS_ACL.dir/libft/ft_strcpy.c.o"
+  "CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o"
+  "CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o"
   "CMakeFiles/LS_ACL.dir/libft/ft_strdel.c.o"
   "CMakeFiles/LS_ACL.dir/libft/ft_strdup.c.o"
   "CMakeFiles/LS_ACL.dir/libft/ft_strequ.c.o"
@@ -89,7 +91,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/LS_ACL.dir/sort.c.o"
   "CMakeFiles/LS_ACL.dir/sort_functions.c.o"
   "CMakeFiles/LS_ACL.dir/start_the_programm.c.o"
-  "CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.o"
   "LS_ACL.pdb"
   "LS_ACL"
 )

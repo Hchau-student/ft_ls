@@ -142,6 +142,7 @@ void				print_total(int	total);
 void				print_with_spaces(int	c, int	len, char *str, char side);
 void				print_link(char *name);
 void				print_time(time_t mod_time);
+void                multicoloumns(t_twlist *names);
 
 /*
 **			 		working with wrong dirname

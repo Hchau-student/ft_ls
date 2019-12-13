@@ -106,5 +106,6 @@ void				ft_twlstclr(t_twlist **alst);
 void				ft_twlstdel_backw(t_twlist **alltwlist,
 												void (*del)(void *, size_t));
 char                *ft_strcpy_return(char *dest, char const *src);
+char                *ft_strcpy_return_noterm(char *dest, char const *src);
 
 #endif

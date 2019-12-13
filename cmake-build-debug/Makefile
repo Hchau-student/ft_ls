@@ -1284,6 +1284,33 @@ libft/ft_strcpy_return.c.s:
 	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return.c.s
 .PHONY : libft/ft_strcpy_return.c.s
 
+libft/ft_strcpy_return_noterm.o: libft/ft_strcpy_return_noterm.c.o
+
+.PHONY : libft/ft_strcpy_return_noterm.o
+
+# target to build an object file
+libft/ft_strcpy_return_noterm.c.o:
+	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.o
+.PHONY : libft/ft_strcpy_return_noterm.c.o
+
+libft/ft_strcpy_return_noterm.i: libft/ft_strcpy_return_noterm.c.i
+
+.PHONY : libft/ft_strcpy_return_noterm.i
+
+# target to preprocess a source file
+libft/ft_strcpy_return_noterm.c.i:
+	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.i
+.PHONY : libft/ft_strcpy_return_noterm.c.i
+
+libft/ft_strcpy_return_noterm.s: libft/ft_strcpy_return_noterm.c.s
+
+.PHONY : libft/ft_strcpy_return_noterm.s
+
+# target to generate assembly for a file
+libft/ft_strcpy_return_noterm.c.s:
+	$(MAKE) -f CMakeFiles/LS_ACL.dir/build.make CMakeFiles/LS_ACL.dir/libft/ft_strcpy_return_noterm.c.s
+.PHONY : libft/ft_strcpy_return_noterm.c.s
+
 libft/ft_strdel.o: libft/ft_strdel.c.o
 
 .PHONY : libft/ft_strdel.o
@@ -2718,6 +2745,9 @@ help:
 	@echo "... libft/ft_strcpy_return.o"
 	@echo "... libft/ft_strcpy_return.i"
 	@echo "... libft/ft_strcpy_return.s"
+	@echo "... libft/ft_strcpy_return_noterm.o"
+	@echo "... libft/ft_strcpy_return_noterm.i"
+	@echo "... libft/ft_strcpy_return_noterm.s"
 	@echo "... libft/ft_strdel.o"
 	@echo "... libft/ft_strdel.i"
 	@echo "... libft/ft_strdel.s"

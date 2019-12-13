@@ -71,7 +71,8 @@ ft_twlstiter.c \
 ft_twlstmap.c \
 ft_twlstclr.c \
 ft_twlstdel_backw.c \
-ft_strcpy_return \
+ft_strcpy_return.c \
+ft_strcpy_return_noterm.c \
 
 OBJ = ft_memset.o \
 ft_bzero.o \
@@ -146,7 +147,8 @@ ft_twlstiter.o \
 ft_twlstmap.o \
 ft_twlstclr.o \
 ft_twlstdel_backw.o \
-ft_strcpy_return \
+ft_strcpy_return.o \
+ft_strcpy_return_noterm.o \
 
 FLAGS = -Wall -Werror -Wextra
 
