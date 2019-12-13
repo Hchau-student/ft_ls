@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.13)
-project(LS_ACL C)
+cmake_minimum_required(VERSION 3.14)
+project(ft_ls C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 include_directories(libft)
 
-add_executable(LS_ACL
+add_executable(ft_ls
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_freematr.c
@@ -81,9 +81,12 @@ add_executable(LS_ACL
         libft/libft.h
         cleaning_up.c
         ft_ls.h
+        get_index.c
         if_direrror.c
+        little_helpers.c
         main.c
         max_len.c
+        presort.c
         print_access.c
         print_err_arg.c
         print_l_flag.c

@@ -26,6 +26,7 @@ int		get_next_dir(char *dirname, char *name)
 	t_twlist	*all_files;
 	t_twlist	*to_clear;
 
+	all_files = NULL;
 	if ((total = simple_ls(dirname, &all_files, name)) == -1)
 		return (-1);
 	print_dir(dirname, all_files, total);

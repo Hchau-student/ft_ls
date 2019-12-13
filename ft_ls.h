@@ -27,7 +27,7 @@
 # define NONEXIST		-1
 # define PERMISSION		0
 # define DIR_EXIST		-2
-# define BUFFSIZE       1500
+# define BUFFSIZE       2000
 
 /*
 **		amounght of seconds in half of an year
@@ -44,11 +44,17 @@ short int			g_delim_links;
 short int			g_delim_uid;
 short int			g_delim_grid;
 short int			g_delim_size;
-short int           g_name_delimiter;
+
+typedef struct 		s_datalist
+{
+	int 					content;
+	struct s_datalist		*next;
+}					t_datalist;
 
 typedef struct		s_filenode
 {
 	char			*name;
+	char            *fullname;
 	char			type_of_file;
 	time_t			mod_time;
 	int				access;
@@ -58,20 +64,21 @@ typedef struct		s_filenode
 	char			*size;
 	int				extraaccess;
 	char			*name_for_link;
-	char            *fullname;
 }					t_filenode;
 
 typedef struct		s_presort
 {
 	int 			index;
-	void			*content;
+	t_twlist		*content;
+	t_list			*numindex;
 }					t_presort;
 
 /*
 **					add to libtf
 */
 void				ft_twlstpush(t_twlist **beginlist, t_twlist *add);
-
+void				ft_twlstpush_line(t_twlist **beginlist, t_twlist *add);
+void				ft_lstpush(t_list **beginlist, t_list *add);
 /*
 **					sort core
 */
@@ -79,6 +86,10 @@ void				sort(t_twlist **filenode);
 int					sorting(t_twlist **begin,
 									int(cmp(t_filenode *, t_filenode *)));
 void				swap_list_filenodes(t_twlist *one, t_twlist *two);
+void				func_presort(t_twlist **lst, int index);
+int					get_index(char *name, int i);
+int 				get_connection_nbr(t_list **nbrs, int *min, int *next_min);
+t_twlist			*get_presort_list(t_presort *all, t_list *index);
 
 /*
 **					sort function
@@ -111,6 +122,14 @@ int					create_simplenode(int	type, char *name,
 void				create_extrainf(char *name, struct stat box,
 															t_filenode **info);
 int					get_l_flag(t_filenode **new, char *full_name, int type);
+int 				get_new_index(char *name, int i, t_presort *all, t_list **all_ind);
+/*
+**					little helpers
+*/
+char				*get_name(char *name);
+//int					free_and_return(char **name, t_twlist **dir_content, int total);
+void				*range_int(t_list **all);
+
 /*
 **					print
 */
@@ -144,5 +163,8 @@ void				clear_filenode_name(void *file, size_t size);
 */
 void				fill_len_nuls(int	count);
 void				count_max_len(t_filenode *inf);
+
+//t_datalist			*ft_dlstnew(int content);
+//void				ft_dlstpush(t_datalist **beginlist, t_datalist *add);
 
 #endif

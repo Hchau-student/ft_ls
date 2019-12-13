@@ -86,6 +86,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LS_ACL.dir/sort.c.o"
   "CMakeFiles/LS_ACL.dir/sort_functions.c.o"
   "CMakeFiles/LS_ACL.dir/start_the_programm.c.o"
+  "CMakeFiles/LS_ACL.dir/presort.c.o"
   "LS_ACL.pdb"
   "LS_ACL"
 )

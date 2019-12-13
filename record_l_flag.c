@@ -12,7 +12,7 @@
 
 #include "ft_ls.h"
 
-static int		free_and_return(t_filenode **to_free)
+static int		free_and_return_here(t_filenode **to_free)
 {
 	if (!*to_free || !to_free)
 		return (-1);
@@ -59,7 +59,7 @@ int				get_l_flag(t_filenode **new, char *full_name, int type)
 		{
 			lstat(full_name, &box);
 			if (!(getpwuid(box.st_uid)))
-				return (free_and_return(new));
+				return (free_and_return_here(new));
 			ret = readlink(full_name, buf, sizeof(buf));
 			buf[ret] = '\0';
 			(*new)->name_for_link = ft_strdup(buf);
@@ -68,7 +68,7 @@ int				get_l_flag(t_filenode **new, char *full_name, int type)
 			stat(full_name, &box);
 		total = box.st_blocks;
 		if (!(getpwuid(box.st_uid)))
-			return (free_and_return(new));
+			return (free_and_return_here(new));
 		create_extrainf(full_name, box, new);
 	}
 	return (total);

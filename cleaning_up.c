@@ -26,6 +26,8 @@ void		clear_filenode(void *file, size_t size)
 			ft_strdel(&(((t_filenode *)file)->name_for_link));
 	}
 	ft_strdel(&(((t_filenode *)file)->name));
+//	if (((t_filenode *)file)->fullname != NULL)
+//		free((((t_filenode *)file)->fullname));
 }
 
 void		clear_filenode_name(void *file, size_t size)

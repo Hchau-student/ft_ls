@@ -23,10 +23,11 @@ void			prepare_struct(t_filenode **prepare)
     (*prepare)->fullname = NULL;
 }
 
-void compare_names(char *name)
+char *cut_slash(char *full_name)
 {
-    if (g_name_delimiter < ft_strlen(name))
-        g_name_delimiter = ft_strlen(name);
+   char *res = full_name;
+   res++;
+   return (res);
 }
 
 int				create_simplenode(int type, char *name, char *full_name,
@@ -36,8 +37,7 @@ int				create_simplenode(int type, char *name, char *full_name,
 	prepare_struct(new);
 	(*new)->type_of_file = type;
 	(*new)->name = ft_strdup(name);
-    (*new)->fullname = ft_strdup(full_name);
-    compare_names(name);
+//	(*new)->fullname = ft_strdup(full_name);
 	if (g_l_flag || g_t_flag)
 		return (get_l_flag(new, full_name, type));
 	return (0);
@@ -51,4 +51,47 @@ void			ft_twlstpush(t_twlist **beginlist, t_twlist *add)
 	if (*beginlist != NULL)
 		(*beginlist)->prev = add;
 	*beginlist = add;
+}
+
+void			ft_twlstpush_line(t_twlist **beginlist, t_twlist *add)
+{
+	t_twlist	*tmp;
+
+	if (!add)
+		return ;
+	tmp = add;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = *beginlist;
+	if (*beginlist != NULL)
+		(*beginlist)->prev = tmp;
+	*beginlist = add;
+}
+
+void			ft_lstpush(t_list **beginlist, t_list *add)
+{
+	if (!add)
+		return ;
+	add->next = *beginlist;
+	*beginlist = add;
+}
+
+void			ft_dlstpush(t_datalist **beginlist, t_datalist *add)
+{
+	if (!add)
+		return ;
+	add->next = *beginlist;
+	*beginlist = add;
+}
+
+t_datalist			*ft_dlstnew(int content)
+{
+	t_datalist		*newlist;
+
+	if (!(newlist = (t_datalist*)malloc(sizeof(t_datalist))))
+		return (NULL);
+	else
+		newlist->content = content;
+	newlist->next = NULL;
+	return (newlist);
 }
