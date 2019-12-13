@@ -105,5 +105,6 @@ void				ft_twlstiter(t_twlist *lst, void (*f)(t_twlist *elem));
 void				ft_twlstclr(t_twlist **alst);
 void				ft_twlstdel_backw(t_twlist **alltwlist,
 												void (*del)(void *, size_t));
+char                *ft_strcpy_return(char *dest, char const *src);
 
 #endif

@@ -30,17 +30,23 @@ char *cut_slash(char *full_name)
    return (res);
 }
 
-int				create_simplenode(int type, char *name, char *full_name,
-															t_filenode **new)
+void compare_names(char *name)
 {
-	*new = (t_filenode *)malloc(sizeof(t_filenode));
-	prepare_struct(new);
-	(*new)->type_of_file = type;
-	(*new)->name = ft_strdup(name);
-//	(*new)->fullname = ft_strdup(full_name);
-	if (g_l_flag || g_t_flag)
-		return (get_l_flag(new, full_name, type));
-	return (0);
+    if (g_name_delimiter < ft_strlen(name))
+        g_name_delimiter = ft_strlen(name);
+}
+int             create_simplenode(int type, char *name, char *full_name,
+                                  t_filenode **new)
+{
+    *new = (t_filenode *)malloc(sizeof(t_filenode));
+    prepare_struct(new);
+    (*new)->type_of_file = type;
+    (*new)->name = ft_strdup(name);
+    (*new)->fullname = ft_strdup(full_name);
+    compare_names(name);
+    if (g_l_flag || g_t_flag)
+        return (get_l_flag(new, full_name, type));
+    return (0);
 }
 
 void			ft_twlstpush(t_twlist **beginlist, t_twlist *add)

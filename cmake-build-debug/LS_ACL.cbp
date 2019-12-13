@@ -8,44 +8,44 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/hchau/Desktop/ft_ls/cmake-build-debug"/>
+				<Option working_dir="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/hchau/Desktop/ft_ls/cmake-build-debug"/>
+				<Option working_dir="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/hchau/Desktop/ft_ls/cmake-build-debug"/>
+				<Option working_dir="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LS_ACL">
-				<Option output="/Users/hchau/Desktop/ft_ls/cmake-build-debug/LS_ACL" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hchau/Desktop/ft_ls/cmake-build-debug"/>
+				<Option output="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/LS_ACL" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hchau/Desktop/ft_ls/."/>
-					<Add directory="/Users/hchau/Desktop/ft_ls/libft"/>
+					<Add directory="/Users/mflannel/Desktop/LS_ACL/."/>
+					<Add directory="/Users/mflannel/Desktop/LS_ACL/libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -54,21 +54,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 LS_ACL"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 LS_ACL"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="LS_ACL/fast">
-				<Option output="/Users/hchau/Desktop/ft_ls/cmake-build-debug/LS_ACL" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hchau/Desktop/ft_ls/cmake-build-debug"/>
+				<Option output="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/LS_ACL" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mflannel/Desktop/LS_ACL/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/hchau/Desktop/ft_ls/."/>
-					<Add directory="/Users/hchau/Desktop/ft_ls/libft"/>
+					<Add directory="/Users/mflannel/Desktop/LS_ACL/."/>
+					<Add directory="/Users/mflannel/Desktop/LS_ACL/libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -77,284 +77,293 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 LS_ACL/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/hchau/Desktop/ft_ls/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 LS_ACL/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mflannel/Desktop/LS_ACL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/cleaning_up.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/cleaning_up.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/ft_ls.h">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/ft_ls.h">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/if_direrror.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/get_index.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_atoi.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/if_direrror.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_bzero.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_atoi.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_freematr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_bzero.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_isalnum.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_freematr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_isalpha.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_isalnum.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_isascii.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_isalpha.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_isdigit.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_isascii.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_isprint.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_isdigit.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_itoa.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_isprint.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstadd.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_itoa.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstclr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstadd.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstdel.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstclr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstdelone.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstdel.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstiter.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstdelone.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstmap.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstiter.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_lstnew.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstmap.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memalloc.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_lstnew.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memccpy.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memalloc.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memchr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memccpy.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memcmp.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memchr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memcpy.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memcmp.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memdel.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memcpy.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memmove.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memdel.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_memset.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memmove.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_one_delim.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_memset.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putchar.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_one_delim.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putchar.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putendl.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putchar_fd.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putendl.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putnbr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putendl_fd.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putnbr_fd.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putnbr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putstr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putnbr_fd.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putstr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strcat.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_putstr_fd.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strcdup.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcat.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strchr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcdup.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strclr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strchr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strcmp.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strclr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strcpy.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcmp.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strdel.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strdup.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strcpy_return.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strequ.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strdel.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_striter.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strdup.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_striteri.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strequ.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strjoin.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_striter.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strlcat.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_striteri.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strlen.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strjoin.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strmap.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strlcat.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strmapi.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strlen.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strncat.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strmap.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strncmp.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strmapi.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strncpy.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strncat.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strnequ.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strncmp.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strnew.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strncpy.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strnstr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strnequ.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strrchr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strnew.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strsplit.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strnstr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strstr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strrchr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strsub.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strsplit.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_strtrim.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strstr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_swap.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strsub.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_tolower.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_strtrim.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_toupper.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_swap.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstadd.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_tolower.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstclr.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_toupper.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstdel.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstadd.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstdel_backw.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstclr.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstdelone.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstdel.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstiter.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstdel_backw.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstmap.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstdelone.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/ft_twlstnew.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstiter.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/libft/libft.h">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstmap.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/main.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/ft_twlstnew.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/max_len.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/libft/libft.h">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/presort.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/little_helpers.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/print_access.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/main.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/print_err_arg.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/max_len.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/print_l_flag.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/presort.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/print_time.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/print_access.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/put_into_structs.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/print_err_arg.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/recodnise_flag.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/print_l_flag.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/record_l_flag.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/print_time.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/recuorsive_ls.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/put_into_structs.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/simple_ls.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/recodnise_flag.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/sort.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/record_l_flag.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/sort_functions.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/recuorsive_ls.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/start_the_programm.c">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/simple_ls.c">
 			<Option target="LS_ACL"/>
 		</Unit>
-		<Unit filename="/Users/hchau/Desktop/ft_ls/CMakeLists.txt">
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/sort.c">
+			<Option target="LS_ACL"/>
+		</Unit>
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/sort_functions.c">
+			<Option target="LS_ACL"/>
+		</Unit>
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/start_the_programm.c">
+			<Option target="LS_ACL"/>
+		</Unit>
+		<Unit filename="/Users/mflannel/Desktop/LS_ACL/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

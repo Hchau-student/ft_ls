@@ -22,6 +22,7 @@
 # include <grp.h>
 # include <sys/xattr.h>
 # include <sys/acl.h>
+# include <sys/ioctl.h>
 # define FOLDER			4
 # define LINK_TYPE		10
 # define NONEXIST		-1
@@ -44,6 +45,7 @@ short int			g_delim_links;
 short int			g_delim_uid;
 short int			g_delim_grid;
 short int			g_delim_size;
+short int           g_name_delimiter;
 
 typedef struct 		s_datalist
 {
