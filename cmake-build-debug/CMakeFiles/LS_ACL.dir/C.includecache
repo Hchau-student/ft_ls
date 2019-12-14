@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/mflannel/Desktop/LS_ACL/ft_ls.h
+/Users/nick/Desktop/FT_LS/ft_ls.h
 libft/libft.h
-/Users/mflannel/Desktop/LS_ACL/libft/libft.h
+/Users/nick/Desktop/FT_LS/libft/libft.h
 sys/types.h
 -
 sys/stat.h
@@ -30,7 +30,7 @@ sys/acl.h
 sys/ioctl.h
 -
 
-/Users/mflannel/Desktop/LS_ACL/libft/libft.h
+/Users/nick/Desktop/FT_LS/libft/libft.h
 string.h
 -
 stdlib.h
@@ -38,7 +38,7 @@ stdlib.h
 unistd.h
 -
 
-/Users/mflannel/Desktop/LS_ACL/start_the_programm.c
+/Users/nick/Desktop/FT_LS/start_the_programm.c
 ft_ls.h
-/Users/mflannel/Desktop/LS_ACL/ft_ls.h
+/Users/nick/Desktop/FT_LS/ft_ls.h
 

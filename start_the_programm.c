@@ -6,7 +6,7 @@
 /*   By: hchau <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:48:29 by hchau             #+#    #+#             */
-/*   Updated: 2019/12/11 23:14:10 by nick             ###   ########.fr       */
+/*   Updated: 2019/12/14 03:40:45 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_ls.h"
@@ -101,53 +101,75 @@ unsigned short get_field_props(unsigned short win_columns, int name_delimiter) /
         columns_got++;
     return(columns_got);
 }
-t_twlist *jump_back(t_twlist *name, int lines) //Прыгаем на элемент, идущий следующим после текущего
+t_twlist *jump_back(t_twlist *recent, int lines) //Прыгаем на элемент, идущий следующим после текущего
 {
-    {
-        t_twlist *current = name;
+    t_twlist *current;
+    current = recent;
 
-        while(lines != 1)
-        {
-            if(current->prev == NULL)
-                return (NULL);
-            current = current->prev;
-            lines--;
+    while(lines != 1)
+    {
+        current = current->prev;
+        lines--;
+    }
+    return (current);
+}
+
+char *write_to_buffer(char *extra, t_twlist *names)
+{
+    int c = 0;
+
+    extra = ft_strcpy_return_noterm(extra, ((t_filenode *) names->content)->name);
+    c = (g_name_delimiter) - ft_strlen(((t_filenode *) names->content)->name);
+    while (c != 0)
+    {
+        extra++;
+        c--;
+    }
+    if ((*extra) == '\n')
+        extra++;
+    return(extra);
+}
+
+int recursive(t_twlist *names, int first_jump, char *extra, int i, char *buff)
+{
+    while (names->next)
+    {
+        if (first_jump == 0) {
+            extra = write_to_buffer(extra, names);
+            names = jump(names, i);
+            extra = write_to_buffer(extra, names);
+            first_jump = 1;
+            recursive(names, first_jump, extra, i, buff);
         }
-        return (current);
+        if (first_jump == 1) {
+            names = jump_back(names, i);
+            extra = write_to_buffer(extra, names);
+            names = jump(names, i);
+            extra = write_to_buffer(extra, names);
+            recursive(names, first_jump, extra, i, buff);
+        }
     }
 }
+
 void multicoloumns(t_twlist *names)
 {
     int i;
-    int c;
+    int j = 0;
     int col_got = 0;
     char *buff;                                                                     //буффер
     char *extra;                                                                    //доп. указатель на буффер
-    int win_columns;                                                      //указатель на параметры окна
+    int win_columns;
+    int first_jump = 0;
     win_columns = get_terminal_props();                                               //Вынимаем параметры окна
     col_got = get_field_props(win_columns, g_name_delimiter);                //считаем количество столбцов
     i = count_nodes(names);                                                         //Считаем количество имен
-    if(!(buff = (char *)malloc(i * (g_name_delimiter + 1))))                        //выделяем память под буффер
+    if(!(buff = (char *)malloc(i * (g_name_delimiter + 2))))                        //выделяем память под буффер
         return ;
-    fill_with_spaces(buff, i * (g_name_delimiter + 1), col_got);                                      //Заполняем буффер пробелами
+    fill_with_spaces(buff, i * (g_name_delimiter + 2), col_got);                                      //Заполняем буффер пробелами
     extra = buff;                                                                   //присваиваем доп. указателю адрес буффера
     i = ((count_nodes(names) / col_got));
-        while (names->next)
-        {
-        extra = ft_strcpy_return_noterm(extra,((t_filenode *) names->content)->name);
-        c = (g_name_delimiter) - ft_strlen(((t_filenode *) names->content)->name);
-        names = jump_back(names, i);
-        while (c != 0)
-        {
-            extra++;
-            c--;
-        }
-        if ((*extra) == '\n')
-            extra++;
-        if(!(names = jump(names, i)))
-            ft_putstr(buff);
-                                                                                    //Прыгаем назад + 1 вперед на след элемеyn
-    }
+    recursive(names, first_jump, extra, i, buff);
+    ft_putstr(buff);
 }
 int			start_the_programm(char *filename, int num)
 {
