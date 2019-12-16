@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy_return_noterm.c                                        :+:      :+:    :+:   */
+/*   print_err_arg.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchau <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/18 21:53:19 by hchau             #+#    #+#             */
-/*   Updated: 2019/04/18 21:54:05 by hchau            ###   ########.fr       */
+/*   Created: 2019/11/06 14:01:19 by hchau             #+#    #+#             */
+/*   Updated: 2019/11/06 14:01:22 by hchau            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/ft_ls.h"
 
-char   *ft_strcpy_return_noterm(char *dest, char const *src)
+void		print_exist(char *name, int type)
 {
-    size_t    a;
-    size_t    len;
-    a = 0;
-    if (dest != src)
-    {
-        len = ft_strlen(src);
-        while (src[a] && a < len)
-        {
-            dest[a] = src[a];
-            a++;
-        }
-    }
-    return (dest + a);
+	if (type == FOLDER)
+	{
+		ft_putstr("ft_ls: ");
+		ft_putstr(name);
+		ft_putstr(": Permission denied\n");
+	}
+	else
+		ft_putendl(name);
+}
+
+void		print_nonexist(char *name)
+{
+	ft_putstr("ft_ls: ");
+	ft_putstr(name);
+	ft_putstr(": No such file or directory\n");
 }

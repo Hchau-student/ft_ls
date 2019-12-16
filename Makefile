@@ -1,13 +1,14 @@
 LS = ft_ls
 CC = gcc
-SRC_DIR = ./
+SRC_DIR = src/
 LIBFT_DIR = libft/
 OBJ_DIR = obj/
 
 LS_SRCS = main.c max_len.c print_access.c cleaning_up.c print_l_flag.c \
 put_into_structs.c recuorsive_ls.c recodnise_flag.c simple_ls.c \
 sort_functions.c sort.c start_the_programm.c print_err_arg.c if_direrror.c \
-record_l_flag.c print_time.c presort.c get_index.c little_helpers.c
+record_l_flag.c print_time.c presort.c get_index.c little_helpers.c color.c \
+multicolomn.c count_multicolomns.c \
 
 LS_OBJ = ${LS_SRCS:c=o}
 
@@ -19,7 +20,7 @@ $(addprefix $(OBJ_DIR), %.o): $(SRC_DIR)%.c
 
 $(LS): $(addprefix $(OBJ_DIR), $(LS_OBJ))
 	@make -C $(LIBFT_DIR)
-	@$(CC) $(addprefix $(OBJ_DIR), $(LS_OBJ)) $(LIBFT_DIR)libft.a -I libft/ -I include/ -o $(LS)
+	@$(CC) $(addprefix $(OBJ_DIR), $(LS_OBJ)) $(LIBFT_DIR)libft.a -I libft/ -I inc/ -o $(LS)
 	@echo "\033[38;2;139;20;39m A \033[38;2;190;60;0m L \033[38;2;255;156;0m L \
 	\033[38;2;252;210;0m   D \033[38;2;60;160;50m O \033[38;2;32;80;250m N \033[38;2;200;8;250m E \033[0m"
 
