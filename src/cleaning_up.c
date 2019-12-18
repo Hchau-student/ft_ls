@@ -16,7 +16,7 @@ void		clear_filenode(void *file, size_t size)
 {
 	if (size == 0)
 		return ;
-	if (g_l_flag == 1 || g_t_flag)
+	if (g_l_flag || g_t_flag || g_colour_flag || g_g_flag)
 	{
 		ft_strdel(&((t_filenode *)file)->amounths_of_links);
 		ft_strdel(&((t_filenode *)file)->size);

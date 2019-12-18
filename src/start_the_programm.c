@@ -14,6 +14,24 @@
 
 void	write_full_buf(char **to_iter)
 {
+	char	col;
+
+	if (g_gay_flag)
+	{
+		if (!get_terminal_props())
+			g_gay_flag = 0;
+		else
+			while (g_print_count > 0)
+			{
+				col = 1;
+				while (col <= 6)
+				{
+					put_gay_str(col);
+					col++;
+				}
+				ft_putstr(END_OF_CLR);
+			}
+	}
 	write(1, g_buf, g_print_count);
 	g_print_count = 0;
 	*to_iter = g_buf;

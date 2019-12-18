@@ -33,7 +33,7 @@ int				create_simplenode(int type, char *name, char *full_name,
 	if (g_multicolomn_flag)
 		compare_names(name);
 	(*new)->fullname = ft_strdup(full_name);
-	if (g_l_flag || g_t_flag || g_g_flag || g_d_flag)
+	if (g_l_flag || g_t_flag || g_g_flag || g_colour_flag)
 		return (get_l_flag(new, full_name, type));
 	return (0);
 }

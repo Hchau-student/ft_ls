@@ -26,8 +26,17 @@ int			get_correct_space(int term_size)
 {
 	int		count_colomn;
 
-	while (g_name_delimiter % 8)
-		g_name_delimiter++;
+	if (g_name_delimiter >= term_size)
+	{
+		count_colomn = 1;
+		return (count_colomn);
+	}
+	if (g_colour_flag)
+		while (g_name_delimiter % 9)
+			g_name_delimiter++;
+	else
+		while (g_name_delimiter % 8)
+			g_name_delimiter++;
 	count_colomn = term_size / (g_name_delimiter);
 	return (count_colomn);
 }
@@ -45,11 +54,13 @@ int			count_all_names(t_twlist *lst)
 	return (count);
 }
 
-int			correct_coloumns(int names, int *coloumns)
+int			correct_coloumns(int names, int *coloumns, int len)
 {
 	int		how_much;
 
 	how_much = 0;
+	if (len <= g_name_delimiter)
+		return (0);
 	if (names <= *coloumns)
 	{
 		*coloumns = names;

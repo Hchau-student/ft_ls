@@ -45,6 +45,24 @@
 # define END_OF_CLR			"\033[0m"
 # define LINK_CLR			"\033[35m"
 # define REG_ACCESS_CLR		"\033[31m"
+# define ST_BIT_CLR			"\033[42m\033[30m"
+# define BLACK_TXT_CLR		"\033[30m"
+
+/*
+**		pride colors defines
+*/
+# define RED_START			0x00FF0000
+# define RED_STOP			0x00FF00FF
+# define ORANGE_START		0x00FA7F00
+# define ORANGE_STOP		0x00FA7FFF
+# define YELLOW_START		0x00ECE200
+# define YELLOW_STOP		0x00ECE2FF
+# define GREEN_START		0x003CA500
+# define GREEN_STOP			0x003CA5FF
+# define BLUE_START			0x000080F0
+# define BLUE_STOP			0x000080FF
+# define PURPLE_START		0x00C808F0
+# define PURPLE_STOP		0x00C808FF
 
 /*
 **		amounght of seconds in half of an year
@@ -72,7 +90,10 @@ char						g_g_flag;
 char						g_d_flag;
 char						g_u_flag;
 char						g_multicolomn_flag;
-
+/*
+**		Александр
+*/
+char						g_gay_flag;
 /*
 **		delimiter globals
 */
@@ -180,15 +201,17 @@ char						*print_link(char *name, char **buf);
 char						*print_time(time_t mod_time, char **buf);
 void						write_full_buf(char **to_iter);
 char						*get_coloured_name(char **str, t_filenode *src);
-
+void						put_gay_str(int color);
 /*
 **					multicolomns
 */
-int							print_multicolomn(t_twlist *lst);
+void						print_multicolomn(t_twlist *lst);
 int							get_terminal_props(void);
 int							get_correct_space(int term_size);
 int							count_all_names(t_twlist *lst);
-int							correct_coloumns(int names, int *coloumns);
+int							correct_coloumns(int names, int *coloumns, int len);
+void						put_colored_multicolomns(char **buf, t_twlist *lst);
+
 /*
 **			 		working with wrong dirname
 */

@@ -34,16 +34,17 @@ char	*get_coloured_name(char **str, t_filenode *src)
 	{
 		if (src->type_of_file == FOLDER)
 		{
+			if ((S_ISVTX & src->access && src->access & S_IWOTH))
+				return (extra = get_colour(&extra, ST_BIT_CLR, src->name));
 			if (src->access & S_IWUSR && src->access
 										& S_IWGRP && src->access & S_IWOTH)
 				return (extra = get_colour(&extra, DIR_ACCESS_CLR, src->name));
-			else
-				return (extra = get_colour(&extra, DIR_CLR, src->name));
+			return (extra = get_colour(&extra, DIR_CLR, src->name));
 		}
 		else if (src->type_of_file == LINK_TYPE)
 			return (extra = get_colour(&extra, LINK_CLR, src->name));
-		else if (src->access & S_IXUSR
-				|| S_IXGRP & src->access || src->access & S_IXOTH)
+		if (src->access & S_IXUSR
+			|| S_IXGRP & src->access || src->access & S_IXOTH)
 			return (extra = get_colour(&extra, REG_ACCESS_CLR, src->name));
 	}
 	return ((extra = ft_strcpy_return(extra, src->name)));

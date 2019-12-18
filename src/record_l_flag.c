@@ -66,7 +66,7 @@ int				get_l_flag(t_filenode **new, char *full_name, int type)
 	total = 0;
 	if (g_d_flag)
 		type = check_type(full_name);
-	if (g_l_flag || g_t_flag || g_g_flag)
+	if (g_l_flag || g_t_flag || g_g_flag || g_colour_flag)
 	{
 		if (type == LINK_TYPE)
 		{

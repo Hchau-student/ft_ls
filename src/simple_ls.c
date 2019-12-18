@@ -64,13 +64,14 @@ int			alternative_sort(DIR *dir_fd, char *name,
 			return (-1);
 		total += check_return;
 	}
+	ft_strdel(&name);
 	if (g_t_flag || g_u_flag)
 	{
 		sort(dir_content);
 		return (free_and_return(&name, dir_content, total));
 	}
 	get_no_sort(dir_content);
-	return (total);
+	return (free_and_return(&name, dir_content, total));
 }
 
 int			abc_sort(DIR *dir_fd, char *name,

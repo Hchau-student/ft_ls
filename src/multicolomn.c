@@ -12,7 +12,7 @@
 
 #include "../inc/ft_ls.h"
 
-char		*prepare_multicolimn_buff(int count_names, int count_colomns)
+char			*prepare_multicolimn_buff(int count_names, int count_colomns)
 {
 	char	*buf;
 	char	*iter;
@@ -40,7 +40,16 @@ char		*prepare_multicolimn_buff(int count_names, int count_colomns)
 	return (buf);
 }
 
-int			get_multicolomn_str(t_twlist *lst, char **buf)
+void			ft_putstr_free(char **str)
+{
+	char	*iter;
+
+	iter = *str;
+	ft_putstr(iter);
+	ft_strdel(str);
+}
+
+void			get_multicolomn_str(t_twlist *lst, char **buf)
 {
 	int		count_change;
 	char	*iter;
@@ -49,6 +58,8 @@ int			get_multicolomn_str(t_twlist *lst, char **buf)
 	count_change = 0;
 	while (lst)
 	{
+		if (*iter == '\0')
+			return ;
 		iter = ft_strcpy_return(iter, ((t_filenode *)lst->content)->name);
 		*iter = ' ';
 		while (*iter != '\0' && *iter != '\n')
@@ -62,10 +73,39 @@ int			get_multicolomn_str(t_twlist *lst, char **buf)
 		}
 		lst = lst->next;
 	}
-	return (0);
 }
 
-int			print_multicolomn(t_twlist *lst)
+void			print_multicolomn(t_twlist *lst)
+{
+	int			term_long;
+	char		*mult_buf;
+	int			count_colomn;
+	int			count_names;
+
+	g_print_count = 0;
+	if (!lst || !lst->content)
+		return ;
+	if ((term_long = get_terminal_props()) <= g_name_delimiter + 1)
+	{
+		term_long != 0 ? put_names(lst, 0) : 0;
+		g_multicolomn_flag = term_long == 0 ? 0 : g_multicolomn_flag;
+		return ;
+	}
+	if ((count_colomn = get_correct_space(term_long)) <= 1)
+		return (put_names(lst, 0));
+	count_names = count_all_names(lst);
+	while (correct_coloumns(count_names, &count_colomn, term_long) != 0)
+		count_colomn--;
+	if (!(mult_buf = prepare_multicolimn_buff(count_names, count_colomn)))
+		return ;
+	if (g_colour_flag)
+		return (put_colored_multicolomns(&mult_buf, lst));
+	get_multicolomn_str(lst, &mult_buf);
+	ft_putstr_free(&mult_buf);
+}
+
+/*
+ * int			print_multicolomn(t_twlist *lst)
 {
 	int			term_long;
 	char		*mult_buf;
@@ -75,19 +115,28 @@ int			print_multicolomn(t_twlist *lst)
 	g_print_count = 0;
 	if (!lst || !lst->content)
 		return (0);
-	if ((term_long = get_terminal_props()) == 0)
+	if ((term_long = get_terminal_props()) <= g_name_delimiter + 1)
 	{
-		g_multicolomn_flag = 0;
-		return (-1);
+		term_long != 0 ? put_names(lst, 0) : 0;
+		g_multicolomn_flag = term_long == 0 ? 0 : g_multicolomn_flag;
+		return (0);
 	}
-	count_colomn = get_correct_space(term_long);
+	if ((count_colomn = get_correct_space(term_long)) <= 1)
+	{
+		put_names(lst, 0);
+		return (0);
+	}
 	count_names = count_all_names(lst);
-	while (correct_coloumns(count_names, &count_colomn) != 0)
+	while (correct_coloumns(count_names, &count_colomn, term_long) != 0)
 		count_colomn--;
 	if (!(mult_buf = prepare_multicolimn_buff(count_names, count_colomn)))
 		return (-1);
+	if (g_colour_flag)
+		return (put_colored_multicolomns(&mult_buf, lst));
 	get_multicolomn_str(lst, &mult_buf);
 	ft_putstr(mult_buf);
 	ft_strdel(&mult_buf);
 	return (0);
 }
+
+ */

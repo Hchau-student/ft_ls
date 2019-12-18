@@ -8,7 +8,7 @@ LS_SRCS = main.c max_len.c print_access.c cleaning_up.c print_l_flag.c \
 put_into_structs.c recuorsive_ls.c recodnise_flag.c simple_ls.c \
 sort_functions.c sort.c start_the_programm.c print_err_arg.c if_direrror.c \
 record_l_flag.c print_time.c presort.c get_index.c little_helpers.c color.c \
-multicolomn.c count_multicolomns.c \
+multicolomn.c count_multicolomns.c colored_multicolomns.c put_rainbow_str.c \
 
 LS_OBJ = ${LS_SRCS:c=o}
 
