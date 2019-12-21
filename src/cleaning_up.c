@@ -36,3 +36,11 @@ void		clear_filenode_name(void *file, size_t size)
 		return ;
 	ft_strdel(&(((t_filenode *)file)->name));
 }
+
+void		clear_lst_nbr(void *file, size_t size)
+{
+	if (size == 0)
+		return ;
+	if (file == NULL)
+		return ;
+}

@@ -94,6 +94,7 @@ char						g_multicolomn_flag;
 **		Александр
 */
 char						g_gay_flag;
+char						g_unset_flag;
 /*
 **		delimiter globals
 */
@@ -202,6 +203,9 @@ char						*print_time(time_t mod_time, char **buf);
 void						write_full_buf(char **to_iter);
 char						*get_coloured_name(char **str, t_filenode *src);
 void						put_gay_str(int color);
+char						*check_pride_russia(char *check);
+int							get_terminal_vertical(void);
+int							recodnise_rus_color(char color, int *stop, int len);
 /*
 **					multicolomns
 */
@@ -228,6 +232,7 @@ int							get_all_unexist(t_twlist *dirnames);
 */
 void						clear_filenode(void *file, size_t size);
 void						clear_filenode_name(void *file, size_t size);
+void						clear_lst_nbr(void *file, size_t size);
 
 /*
 **					max_len

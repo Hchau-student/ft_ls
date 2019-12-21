@@ -46,6 +46,6 @@ void		count_max_len(t_filenode *inf)
 
 void		compare_names(char *name)
 {
-	if (g_name_delimiter < ft_strlen(name))
+	if ((size_t)g_name_delimiter < ft_strlen(name))
 		g_name_delimiter = ft_strlen(name);
 }

@@ -28,6 +28,8 @@ static int		free_and_return_here(t_filenode **to_free)
 		ft_strdel(&(*to_free)->username);
 	if ((*to_free)->groupname != NULL)
 		ft_strdel(&(*to_free)->groupname);
+	if ((*to_free)->fullname != NULL)
+		ft_strdel(&(*to_free)->fullname);
 	return (-1);
 }
 

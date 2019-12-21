@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   little_helpers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflannel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acarlota <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/16 20:01:51 by mflannel          #+#    #+#             */
 /*   Updated: 2019/12/16 20:13:58 by mflannel         ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   color.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflannel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acarlota <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/16 19:44:00 by mflannel          #+#    #+#             */
 /*   Updated: 2019/12/16 19:45:30 by mflannel         ###   ########.fr       */

@@ -40,7 +40,7 @@ int			put_reading_result(char *d_name, int d_type,
 	return (check_return);
 }
 
-static int	free_and_return(char **name, t_twlist **dir_content, int total)
+static int	free_and_return(char **name, int total)
 {
 	if (*name)
 		ft_strdel(name);
@@ -61,17 +61,16 @@ int			alternative_sort(DIR *dir_fd, char *name,
 			continue ;
 		if ((check_return = put_reading_result(res->d_name,
 						res->d_type, &name, dir_content)) == -1)
-			return (-1);
+			return (free_and_return(&name, -1));
 		total += check_return;
 	}
-	ft_strdel(&name);
 	if (g_t_flag || g_u_flag)
 	{
 		sort(dir_content);
-		return (free_and_return(&name, dir_content, total));
+		return (free_and_return(&name, total));
 	}
 	get_no_sort(dir_content);
-	return (free_and_return(&name, dir_content, total));
+	return (free_and_return(&name, total));
 }
 
 int			abc_sort(DIR *dir_fd, char *name,
@@ -94,11 +93,14 @@ int			abc_sort(DIR *dir_fd, char *name,
 		get_presort_index(i, &all_i, &presort[i], NULL);
 		if ((check_return = put_reading_result(res->d_name,
 						res->d_type, &name, &presort[i])) == -1)
-			return (-1);
+		{
+			ft_lstdel(&all_i, clear_lst_nbr);
+			return (free_and_return(&name, -1));
+		}
 		total += check_return;
 	}
 	get_abc_result(presort, all_i, dir_content);
-	return (free_and_return(&name, dir_content, total));
+	return (free_and_return(&name, total));
 }
 
 int			simple_ls(char *name, t_twlist **dir_content, char *short_name)

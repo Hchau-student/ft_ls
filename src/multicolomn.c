@@ -85,7 +85,7 @@ void			print_multicolomn(t_twlist *lst)
 	g_print_count = 0;
 	if (!lst || !lst->content)
 		return ;
-	if ((term_long = get_terminal_props()) <= g_name_delimiter + 1)
+	if ((term_long = get_terminal_props()) <= ++g_name_delimiter + 1)
 	{
 		term_long != 0 ? put_names(lst, 0) : 0;
 		g_multicolomn_flag = term_long == 0 ? 0 : g_multicolomn_flag;
@@ -103,40 +103,3 @@ void			print_multicolomn(t_twlist *lst)
 	get_multicolomn_str(lst, &mult_buf);
 	ft_putstr_free(&mult_buf);
 }
-
-/*
- * int			print_multicolomn(t_twlist *lst)
-{
-	int			term_long;
-	char		*mult_buf;
-	int			count_colomn;
-	int			count_names;
-
-	g_print_count = 0;
-	if (!lst || !lst->content)
-		return (0);
-	if ((term_long = get_terminal_props()) <= g_name_delimiter + 1)
-	{
-		term_long != 0 ? put_names(lst, 0) : 0;
-		g_multicolomn_flag = term_long == 0 ? 0 : g_multicolomn_flag;
-		return (0);
-	}
-	if ((count_colomn = get_correct_space(term_long)) <= 1)
-	{
-		put_names(lst, 0);
-		return (0);
-	}
-	count_names = count_all_names(lst);
-	while (correct_coloumns(count_names, &count_colomn, term_long) != 0)
-		count_colomn--;
-	if (!(mult_buf = prepare_multicolimn_buff(count_names, count_colomn)))
-		return (-1);
-	if (g_colour_flag)
-		return (put_colored_multicolomns(&mult_buf, lst));
-	get_multicolomn_str(lst, &mult_buf);
-	ft_putstr(mult_buf);
-	ft_strdel(&mult_buf);
-	return (0);
-}
-
- */

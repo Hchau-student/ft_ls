@@ -24,29 +24,13 @@ int			flag_error(char *flag_or_filename)
 			write(1, "illegal option -- ", 18);
 			ft_putchar(flag_or_filename[if_flag]);
 			write(1, "\n", 1);
-			write(1, "usage: ft_ls [-GRadfglrtu_set_pride_] [file ...]\n", 49);
+			ft_putstr("usage: ft_ls "
+			"[-GRadfglrtu]"
+			"[_set_pride_]"
+			"[_unset_music_]"
+			" [file ...]\n");
 			return (1);
 		}
-	}
-	return (0);
-}
-
-int			check_pride(char *check)
-{
-	char	pride_src[15];
-	char	*iter;
-
-	ft_strcpy(pride_src, "_set_pride_");
-	iter = pride_src;
-	while (*check && *check == *iter)
-	{
-		check++;
-		iter++;
-	}
-	if (!*iter)
-	{
-		g_gay_flag = 1;
-		return (1);
 	}
 	return (0);
 }
@@ -94,9 +78,9 @@ int			recodnise_flag(char *flag_line)
 			i++;
 		else if (flag_line[i] == '_')
 		{
-			if (!(check_pride(flag_line + i)))
+			if (!(check_pride_russia(flag_line + i)))
 				return (i);
-			i += ft_strlen("_set_pride_");
+			i += ft_strlen(check_pride_russia(flag_line + i));
 		}
 		else
 			return (i);
@@ -124,5 +108,6 @@ void		nulg_l_flags(int count)
 		g_u_flag = 0;
 		g_gay_flag = 0;
 		g_multicolomn_flag = 1;
+		g_unset_flag = 0;
 	}
 }
